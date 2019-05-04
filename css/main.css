@@ -15,7 +15,13 @@ body {
     margin-top: 10px;
 }
 
+body p {
+	margin-left: 15px;
+}
 
+body h3 {
+	margin-left: 15px;
+}
 
 /*========HEADER ALL PAGES========*/
 

@@ -162,6 +162,7 @@ main {
 h3 {
     color: #000;
     font-family: 'Cookie', cursive;
+	margin-left: 15px;
 }
 
 
@@ -228,6 +229,14 @@ container {
     margin: 30px 5px 5px 15px;
     font-family: 'Karma', serif;
     font-weight: 800;
+}
+
+#assignment-landing h3 {
+    margin-left: 15px;
+}
+
+#assignment-landing p {
+    margin-left: 15px;
 }
 
 #assignment-landing ul {

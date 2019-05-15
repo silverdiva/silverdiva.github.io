@@ -37,7 +37,7 @@
 			<h1>CSS3 Using JavaScript</h1>
 			<h3>Manipulating CSS Class Properties Using JavaScript</h3>
 			<p class="image-border-change">
-				Hover over the Image to Add a Border.
+				<button class="myButtons" type="button">HOVER OVER THE IMAGE to Add a Border.</button>
 			</p>
 		</div>
 
@@ -80,7 +80,7 @@
 					}
 
 					function changeColor() {
-						var color = prompt("Pick a color - any color!");
+						var color = prompt("To change the text color on the buttons, just pick a color - ANY color!");
 						var buttons = document.getElementsByClassName('myButtons');
 
 						for (var i = 0; i < buttons.length; i++) {

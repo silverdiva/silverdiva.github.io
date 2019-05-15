@@ -30,6 +30,7 @@ button:hover {
 #kim-and-girls {
 	border-radius: 10px;
 	width: 50%;
+	margin-left: 20px;
 }
 
 button {
@@ -44,3 +45,4 @@ button {
 #footer ul {
     margin-top: -70px;
 }
+

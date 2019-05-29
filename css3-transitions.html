@@ -6,6 +6,8 @@
 	<meta charset="utf-8" />
 	<meta name="author" content="Kim Llanos">
 	<link href="css/main.css" type="text/css" rel="stylesheet" />
+	<link href="css/code-fluency.css" type="text/css" rel="stylesheet" />
+
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 	<script src="scripts/scripts.js"></script>
 </head>
@@ -32,7 +34,140 @@
 		<div id="assignment-landing">
 			<h1>CSS3 Transitions</h1>
 			<h3>Designing, Defining, and Triggering CSS3 Transitions without Custom Libraries (From Scratch)</h3>
-			<p>ipsum lorem</p>
+			<p>We can use JavaScript to animate the visibility of things such as titles, paragraph text, and lists.</p>
+			<p>
+				<p>We can then use JavaScript to control the rate or speed at which those things are animated, which is called a transition.</p>
+				<h2>Visibility Transition</h2>
+				<p>
+					<a class="toggle" href="#example">Click Here to Show a Visibility Transition of a Paragraph</a>
+				</p>
+
+				<div class="toggle-content" id="example">
+					Here's some text we want to toggle the visibility of.
+					<script>
+						// Show an element
+						var show = function(elem) {
+
+							// Get the natural height of the element
+							var getHeight = function() {
+								elem.style.display = 'block'; // Make it visible
+								var height = elem.scrollHeight + 'px'; // Get it's height
+								elem.style.display = ''; //  Hide it again
+								return height;
+							};
+
+							var height = getHeight(); // Get the natural height
+							elem.classList.add('is-visible'); // Make the element visible
+							elem.style.height = height; // Update the max-height
+
+							// Once the transition is complete, remove the inline max-height so the content can scale responsively
+							window.setTimeout(function() {
+								elem.style.height = '';
+							}, 350);
+
+						};
+
+						// Hide an element
+						var hide = function(elem) {
+
+							// Give the element a height to change from
+							elem.style.height = elem.scrollHeight + 'px';
+
+							// Set the height back to 0
+							window.setTimeout(function() {
+								elem.style.height = '0';
+							}, 1);
+
+							// When the transition is complete, hide it
+							window.setTimeout(function() {
+								elem.classList.remove('is-visible');
+							}, 350);
+
+						};
+
+						// Toggle element visibility
+						var toggle = function(elem, timing) {
+
+							// If the element is visible, hide it
+							if (elem.classList.contains('is-visible')) {
+								hide(elem);
+								return;
+							}
+
+							// Otherwise, show it
+							show(elem);
+
+						};
+
+						// Listen for click events
+						document.addEventListener('click', function(event) {
+
+							// Make sure clicked element is our toggle
+							if (!event.target.classList.contains('toggle')) return;
+
+							// Prevent default link behavior
+							event.preventDefault();
+
+							// Get the content
+							var content = document.querySelector(event.target.hash);
+							if (!content) return;
+
+							// Toggle the content
+							toggle(content);
+
+						}, false);
+					</script>
+				</div>
+				<h2>Size & Color Transitions</h2>
+				<div id ="div1">Watch How I Change!</div>
+            <p>
+            	Watch the background color change, too!
+            </p>
+            <button onclick="myFunction()">Make it Smaller</button>
+            <button onclick="myReturnFunction()">Return It Back to Normal</button>
+            <div id="div2"></div>
+            
+            <script>
+                
+                document.getElementById("div2").style.backgroundColor = "white";
+                //Call document then the element you're styling, then style object of the element, then set it.
+                document.getElementById("div1").style.color = "red";
+                
+                //If style element originally has a dash, take it out and capitalize the second word.
+                document.body.style.backgroundColor = "lightblue";
+                function myFunction() {
+                    document.getElementById("div1").style.WebkitTransition = "all 2s"; // Code for Safari 3.1 to 6.0
+                    document.getElementById("div1").style.transition = "color 2s, background-color 5s, font-size 10s";       // Standard syntax
+                    document.body.style.transition = "background-color 2s";
+                    
+                    document.getElementById("div1").style.color = "blue";
+                    document.getElementById("div1").style.backgroundColor = "white";
+                    document.getElementById("div1").style.fontSize = "20%";
+                    
+                    document.body.style.backgroundColor = "yellow";
+                }
+                
+                function myReturnFunction() {
+                    document.getElementById("div1").style.WebkitTransition = "all 2s"; // Code for Safari 3.1 to 6.0
+                    document.getElementById("div1").style.transition = "color 2s, background-color 2s, font-size 10s";       // Standard syntax
+                    document.body.style.transition = "background-color 2s";
+                    
+                    document.getElementById("div1").style.color = "red";
+                    document.getElementById("div1").style.backgroundColor = "lightBlue";
+                    document.getElementById("div1").style.fontSize = "100%";
+                    
+                    document.body.style.backgroundColor = "lightblue";
+                }
+            </script>
+              
+              <h2>Hover Transitions: Color-Fade, Color-Spin, Color-Size</h2>
+               <div id="header"></div>
+        
+            <div id="main" class="container">
+                <button id="alpha">Color Transition</button>
+                <button id="beta">Color Spin</button>
+                <button id="gamma">Color Size</button>
+            </div>
 		</div>
 	</main>
 
@@ -54,6 +189,7 @@
 			<p id="byui"><a href="https://www.byui.edu">BYU-Idaho</a></p>
 		</div>
 	</footer>
+	<script type="text/javascript" language="javascript" link href="scripts/scripts.js"></script>
 </body>
 
 </html>

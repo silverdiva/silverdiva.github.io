@@ -1,5 +1,8 @@
 /*code fluency page-specific styling*/
 
+
+/******using javascript.html styling*********/
+
 .wrapper {
 	margin-top: 2px;
 	display: -webkit-flex;
@@ -42,7 +45,78 @@ button {
 	background-color: #86af49;
 }
 
-#footer ul {
-    margin-top: -70px;
+
+
+
+/******using transitions.html styling*********/
+
+.toggle-content {
+	display: none;
+	height: 0;
+	overflow: hidden;
+	transition: height 350ms ease-in-out;
+	margin-left: 15px;
 }
 
+.toggle-content.is-visible {
+	display: block;
+	height: auto;
+	margin-bottom: 90px;
+}
+
+
+/*   */
+
+#main div {
+	display: block;
+	text-align: center;
+	padding: 40px;
+	margin: auto;
+	font-family: fantasy;
+	color: firebrick;
+	width: 300px;
+	height: 100px;
+}
+
+#alpha {
+	background: orange;
+	transition: linear 3s;
+}
+
+#alpha:hover {
+	background: #69BE28;
+}
+
+#beta {
+	background: button;
+	transition: 3s;
+}
+
+#beta:hover {
+	transform: rotateY(180deg);
+	background-color: gold;
+	padding: 100px;
+}
+
+#gamma {
+	background: #2c7e87;
+}
+
+#gamma:hover {
+	background: #1C8B85;
+	transform: scale(0.2);
+	transition: all 5s ease-in-out;
+}
+
+#assignment-landing {
+	padding: 0px;
+	margin-bottom: 100px;
+}
+
+#footer ul {
+	margin-top: -70px;
+}
+
+#div1 {
+	margin-left: 15px;
+}

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>CSS3 Transitions With JavaScript</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    </head>
+    <body>
+            <div id ="div1">Watch How I Change!</div>
+            <p>
+            	Watch the background color change, too!
+            </p>
+            <button onclick="myFunction()">Make it Smaller</button>
+            <button onclick="myReturnFunction()">Return It Back to Normal</button>
+            <div id="div2"></div>
+            
+            <script>
+                
+                document.getElementById("div2").style.backgroundColor = "white";
+                //Call document then the element you're styling, then style object of the element, then set it.
+                document.getElementById("div1").style.color = "red";
+                
+                //If style element originally has a dash, take it out and capitalize the second word.
+                document.body.style.backgroundColor = "lightblue";
+                function myFunction() {
+                    document.getElementById("div1").style.WebkitTransition = "all 2s"; // Code for Safari 3.1 to 6.0
+                    document.getElementById("div1").style.transition = "color 2s, background-color 5s, font-size 10s";       // Standard syntax
+                    document.body.style.transition = "background-color 2s";
+                    
+                    document.getElementById("div1").style.color = "blue";
+                    document.getElementById("div1").style.backgroundColor = "white";
+                    document.getElementById("div1").style.fontSize = "20%";
+                    
+                    document.body.style.backgroundColor = "yellow";
+                }
+                
+                function myReturnFunction() {
+                    document.getElementById("div1").style.WebkitTransition = "all 2s"; // Code for Safari 3.1 to 6.0
+                    document.getElementById("div1").style.transition = "color 2s, background-color 2s, font-size 10s";       // Standard syntax
+                    document.body.style.transition = "background-color 2s";
+                    
+                    document.getElementById("div1").style.color = "red";
+                    document.getElementById("div1").style.backgroundColor = "lightBlue";
+                    document.getElementById("div1").style.fontSize = "100%";
+                    
+                    document.body.style.backgroundColor = "lightblue";
+                }
+            </script>
+       
+    </body>
+</html>

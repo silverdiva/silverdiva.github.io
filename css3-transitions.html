@@ -7,9 +7,7 @@
 	<meta name="author" content="Kim Llanos">
 	<link href="css/main.css" type="text/css" rel="stylesheet" />
 	<link href="css/code-fluency.css" type="text/css" rel="stylesheet" />
-
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
-	<script src="scripts/scripts.js"></script>
 </head>
 
 
@@ -37,17 +35,24 @@
 			<p>We can use JavaScript to animate the visibility of things such as titles, paragraph text, and lists.</p>
 			<p>
 				<p>We can then use JavaScript to control the rate or speed at which those things are animated, which is called a transition.</p>
+				<br>
 				<h2>Visibility Transition</h2>
+				<p>In this example, we use JavaScript to "toggle" the 'height' property to control the rate of the 'show/hide visibility' of text.
+					<br><br> The current transition rate to show/hide the text is set at 1200 milliseconds using the CSS3 'transition' property with the associated value of 'height 1200ms ease-in-out;'.
+					<br>
+					<br> If we increase the time to say 2000 milliseconds, then the show/hide transition would be slower.
+					<br> If we decrease the time to say 500 milliseconds, then the show/hide transition would be faster.
+				</p>
 				<p>
-					<a class="toggle" href="#example">Click Here to Show a Visibility Transition of a Paragraph</a>
+					<a class="visible" href="#example">Click Here to Show the Visibility Transition of a Paragraph</a>
+					<br>
 				</p>
 
-				<div class="toggle-content" id="example">
-					Here's some text we want to toggle the visibility of.
+				<div class="visible-content" id="example">
+					Here's some text we want to appear slowly when a link or button is clicked.
 					<script>
 						// Show an element
 						var show = function(elem) {
-
 							// Get the natural height of the element
 							var getHeight = function() {
 								elem.style.display = 'block'; // Make it visible
@@ -55,119 +60,105 @@
 								elem.style.display = ''; //  Hide it again
 								return height;
 							};
-
 							var height = getHeight(); // Get the natural height
 							elem.classList.add('is-visible'); // Make the element visible
 							elem.style.height = height; // Update the max-height
-
 							// Once the transition is complete, remove the inline max-height so the content can scale responsively
 							window.setTimeout(function() {
 								elem.style.height = '';
-							}, 350);
-
+							}, 1200);
 						};
-
 						// Hide an element
 						var hide = function(elem) {
-
 							// Give the element a height to change from
 							elem.style.height = elem.scrollHeight + 'px';
-
 							// Set the height back to 0
 							window.setTimeout(function() {
 								elem.style.height = '0';
 							}, 1);
-
 							// When the transition is complete, hide it
 							window.setTimeout(function() {
 								elem.classList.remove('is-visible');
-							}, 350);
-
+							}, 1200);
 						};
-
 						// Toggle element visibility
 						var toggle = function(elem, timing) {
-
 							// If the element is visible, hide it
 							if (elem.classList.contains('is-visible')) {
 								hide(elem);
 								return;
 							}
-
 							// Otherwise, show it
 							show(elem);
-
 						};
-
 						// Listen for click events
 						document.addEventListener('click', function(event) {
-
 							// Make sure clicked element is our toggle
-							if (!event.target.classList.contains('toggle')) return;
-
+							if (!event.target.classList.contains('visible')) return;
 							// Prevent default link behavior
 							event.preventDefault();
-
 							// Get the content
 							var content = document.querySelector(event.target.hash);
 							if (!content) return;
-
 							// Toggle the content
 							toggle(content);
-
 						}, false);
 					</script>
 				</div>
+
+
+				<br>
 				<h2>Size & Color Transitions</h2>
-				<div id ="div1">Watch How I Change!</div>
-            <p>
-            	Watch the background color change, too!
-            </p>
-            <button onclick="myFunction()">Make it Smaller</button>
-            <button onclick="myReturnFunction()">Return It Back to Normal</button>
-            <div id="div2"></div>
-            
-            <script>
-                
-                document.getElementById("div2").style.backgroundColor = "white";
-                //Call document then the element you're styling, then style object of the element, then set it.
-                document.getElementById("div1").style.color = "red";
-                
-                //If style element originally has a dash, take it out and capitalize the second word.
-                document.body.style.backgroundColor = "lightblue";
-                function myFunction() {
-                    document.getElementById("div1").style.WebkitTransition = "all 2s"; // Code for Safari 3.1 to 6.0
-                    document.getElementById("div1").style.transition = "color 2s, background-color 5s, font-size 10s";       // Standard syntax
-                    document.body.style.transition = "background-color 2s";
-                    
-                    document.getElementById("div1").style.color = "blue";
-                    document.getElementById("div1").style.backgroundColor = "white";
-                    document.getElementById("div1").style.fontSize = "20%";
-                    
-                    document.body.style.backgroundColor = "yellow";
-                }
-                
-                function myReturnFunction() {
-                    document.getElementById("div1").style.WebkitTransition = "all 2s"; // Code for Safari 3.1 to 6.0
-                    document.getElementById("div1").style.transition = "color 2s, background-color 2s, font-size 10s";       // Standard syntax
-                    document.body.style.transition = "background-color 2s";
-                    
-                    document.getElementById("div1").style.color = "red";
-                    document.getElementById("div1").style.backgroundColor = "lightBlue";
-                    document.getElementById("div1").style.fontSize = "100%";
-                    
-                    document.body.style.backgroundColor = "lightblue";
-                }
-            </script>
-              
-              <h2>Hover Transitions & Transformations: Color-Fade, Color-Spin, Color-Size</h2>
-               <div id="header"></div>
-        
-            <div id="main" class="container">
-                <button id="alpha">Color Transition</button>
-                <button id="beta">Color Spin</button>
-                <button id="gamma">Color Size</button>
-            </div>
+				<div id="div1">Watch How I Change!</div>
+				<p>
+					Watch the background color change, too!
+				</p>
+				<button onclick="myFunction()">Make it Smaller</button>
+				<button onclick="myReturnFunction()">Return It Back to Normal</button>
+				<div id="div2"></div>
+
+				<script>
+					document.getElementById("div2").style.backgroundColor = "white";
+					//Call document then the element you're styling, then style object of the element, then set it.
+					document.getElementById("div1").style.color = "red";
+
+					//If style element originally has a dash, take it out and capitalize the second word.
+					document.body.style.backgroundColor = "lightblue";
+
+					function myFunction() {
+						document.getElementById("div1").style.WebkitTransition = "all 2s"; // Code for Safari 3.1 to 6.0
+						document.getElementById("div1").style.transition = "color 2s, background-color 5s, font-size 10s"; // Standard syntax
+						document.body.style.transition = "background-color 2s";
+
+						document.getElementById("div1").style.color = "blue";
+						document.getElementById("div1").style.backgroundColor = "white";
+						document.getElementById("div1").style.fontSize = "20%";
+
+						document.body.style.backgroundColor = "yellow";
+					}
+
+					function myReturnFunction() {
+						document.getElementById("div1").style.WebkitTransition = "all 2s"; // Code for Safari 3.1 to 6.0
+						document.getElementById("div1").style.transition = "color 2s, background-color 2s, font-size 10s"; // Standard syntax
+						document.body.style.transition = "background-color 2s";
+
+						document.getElementById("div1").style.color = "red";
+						document.getElementById("div1").style.backgroundColor = "lightBlue";
+						document.getElementById("div1").style.fontSize = "100%";
+
+						document.body.style.backgroundColor = "lightblue";
+					}
+				</script>
+
+				<br>
+				<h2>Hover Transitions & Transformations: Color-Fade, Color-Spin, Color-Size</h2>
+				<div id="header"></div>
+
+				<div id="main" class="container">
+					<button id="transition">Color Transition</button>
+					<button id="spin">Color Spin</button>
+					<button id="size">Color Size</button>
+				</div>
 		</div>
 	</main>
 

@@ -50,59 +50,48 @@ button {
 
 /******using transitions.html styling*********/
 
-.toggle-content {
+.visible-content {
 	display: none;
 	height: 0;
 	overflow: hidden;
-	transition: height 350ms ease-in-out;
+	transition: height 1200ms ease-in-out;
 	margin-left: 15px;
 }
 
-.toggle-content.is-visible {
+
+.visible-content.is-visible {
 	display: block;
 	height: auto;
 	margin-bottom: 90px;
 }
 
 
-/*   */
 
-#main div {
-	display: block;
-	text-align: center;
-	padding: 40px;
-	margin: auto;
-	font-family: fantasy;
-	color: firebrick;
-	width: 300px;
-	height: 100px;
-}
-
-#alpha {
+#transition {
 	background: orange;
 	transition: linear 3s;
 }
 
-#alpha:hover {
+#transition:hover {
 	background: #69BE28;
 }
 
-#beta {
+#spin {
 	background: button;
 	transition: 3s;
 }
 
-#beta:hover {
+#spin:hover {
 	transform: rotateY(180deg);
 	background-color: gold;
 	padding: 100px;
 }
 
-#gamma {
+#size {
 	background: #2c7e87;
 }
 
-#gamma:hover {
+#size:hover {
 	background: #1C8B85;
 	transform: scale(0.2);
 	transition: all 5s ease-in-out;
@@ -117,6 +106,6 @@ button {
 	margin-top: -70px;
 }
 
-#div1 {
+#div1, h2, button {
 	margin-left: 15px;
 }

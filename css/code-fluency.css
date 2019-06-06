@@ -2,7 +2,6 @@
 
 
 /******using javascript.html styling*********/
-
 .wrapper {
 	margin-top: 2px;
 	display: -webkit-flex;
@@ -23,7 +22,6 @@
 	padding: 1px 1px 1px 1px;
 	margin-bottom: 70px;
 }
-
 
 button:hover {
 	background-color: #52bbc7;
@@ -49,7 +47,6 @@ button {
 
 
 /******using transitions.html styling*********/
-
 .visible-content {
 	display: none;
 	height: 0;
@@ -58,14 +55,11 @@ button {
 	margin-left: 15px;
 }
 
-
 .visible-content.is-visible {
 	display: block;
 	height: auto;
 	margin-bottom: 90px;
 }
-
-
 
 #transition {
 	background: orange;
@@ -103,9 +97,39 @@ button {
 }
 
 #footer ul {
-	margin-top: -70px;
+	margin-top: -40px;
 }
 
 #div1, h2, button {
 	margin-left: 15px;
+	font-size: 15px;
+}
+
+
+/******using 02-javascript-objects.html styling*********/
+
+#movieform {
+	margin-bottom: 80px;
+	margin-top: -90px;
+}
+
+.form-border {
+    border-radius: 5px;
+	/*width:65%;*/
+    height: auto;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    text-align: left;
+    margin: auto;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    background-color: lightcyan;
+    overflow: hidden;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    color: black;
+}
 }

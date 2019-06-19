@@ -2,55 +2,15 @@
 <html lang="en">
 
 <head>
-	<title>CIT 261 | JavaScript Objects</title>
+	<title>CIT 261 | Topic #02 JavaScript Objects</title>
 	<meta charset="utf-8" />
 	<meta name="author" content="Kim Llanos">
 	<link href="css/main.css" type="text/css" rel="stylesheet" />
 	<link href="css/code-fluency.css" type="text/css" rel="stylesheet" />
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<script src="../scripts/02.js"></script>
 
-	<!--script for Movie Premier update form-->
-	<script>
-		function MOVIEPREMIERES() {
-			//var name = document.forms["RegForm"]["Name"];
-			var name = document.getElementById("name").value;
-			var email = document.getElementById("email").value;
-			var what = document.getElementById("movieform").value;
-
-			if (name.value == "") {
-				window.alert("Please enter your name.");
-				name.focus();
-				return false;
-			}
-
-			if (email.value == "") {
-				window.alert("Please enter a valid e-mail address.");
-				email.focus();
-				return false;
-			}
-
-			if (email.value.indexOf("@", 0) < 0) {
-				window.alert("Please enter a valid "
-					@xxx.xxx " e-mail address.");
-				email.focus();
-				return false;
-			}
-
-			if (email.value.indexOf(".", 0) < 0) {
-				window.alert("Please enter a valid e-mail address.");
-				email.focus();
-				return false;
-			}
-
-			if (what.selectedIndex < 1) {
-				alert("Please enter your movie genre.");
-				what.focus();
-				return false;
-			}
-
-			return true;
-		}
-	</script>
+	
 </head>
 
 <body>
@@ -73,21 +33,67 @@
 	<main>
 		<div id="assignment-landing">
 			<h1>Topic #2: JavaScript Objects</h1>
-			<h3>Object Creation Functions, Inheritance, Properties, Methods, Instantiation</h3>
-			<p>ipsum lorem</p>
+			<h3>Object Creation, Functions, Inheritance, Properties, Methods, Instantiation</h3>
+			<p>First, we will create a 'User' class based on the form inputs and a constructor comprising of (firstname, lastname).</p>
+			
+			<p>Then we will call a function that displays a personalized message to the user.</p>
+			
+			<p>The 'Sign Up Here' button calls a 'welcome message' function that displays the combined first + last name that was created with the user class.</p>
 
 
 			<h1>Movie Premiere Updates</h1>
-			<h2>Get updates on upcoming movie premiere dates for your chosen genre!</h2>
-		</div>
-		<!--movie premier email form-->
-		<div id="movieform" class="form-border">
-			<form name="movieform" action="submit.html" onsubmit="return MOVIEPREMIERES()">
-				<p>Name: <input type="text" size=50 name="name" required> </p><br>
-				<p>E-mail Address: <input type="text" size=49 name="email" required> </p><br>
 
-				<p>Select Your Movie Genre
-					<select value="required" name="genre" multiple required> 
+		</div>
+
+		<!--movie premier register name + email form-->
+		<div id="movieform" class="form-border">
+			<h2>Sign-up for our newsletter to get upcoming movie premiere dates for your chosen genre!</h2>
+			<label for="first-name">First Name:</label>
+			<input type="text" id="first-name" name="fn" size=50 />
+			<br>
+			<br>
+			<label for="last-name">Last Name:</label>
+			<input type="text" id="last-name" name="ln" size=50 />
+			<br>
+			<br>
+			<label for="password">Password:</label>
+			<input type="password" id="password" name="password" size=45 />
+			<br>
+			<br>
+			<div id="welcome-u"></div>
+			<button class="basic-button" onclick="sendWelcomeMessage()">Sign Up Here</button>
+
+			<br>
+			<br>
+			<script>
+				//creates a new user for our movie premiere newsletter
+				function createUser() {
+					// get all the relevant movie form input values that the welcome message uses
+					fn = document.getElementById("first-name").value;
+					ln = document.getElementById("last-name").value;
+
+					//displays the values
+					console.log(`${fn}, ${ln}`);
+					//returns the new user object based on the form values
+					return new User(fn, ln);
+				}
+				
+				function sendWelcomeMessage() {
+					const u = createUser();
+
+					let welcome_Message = u.welcomeMessage();
+					// shows the personalized welcome message with user's full name
+					console.log(`${welcome_Message}`);
+					document.getElementById("welcome-u").innerHTML = welcome_Message;
+				}
+			</script>
+		</div>
+		<br>
+
+		<div id="movieform" class="form-border">
+			<form name="movieform" action="02-submit.html" onsubmit="return MOVIEPREMIERES()">
+				<p>Movie Genres
+					<select value="required" name="genre" id="genre" multiple required> 
 			<option>Action & Adventure</option> 
 			<option>Rom-Com</option> 
 			<option>Sci-Fi</option> 
@@ -95,15 +101,24 @@
 			<option>Family</option> 
 			<option>Comedy</option>
 			<option>Documentary</option>  
-		</select></p><br>
-
-				<p>Please let us know if you have any comments or suggestions!</p>
+		</select></p>
+				<p class="genre">*ctrl + select for multiple genres</p>
+				<br>
+				<h2>Enter your email address so we can send you movie premiere dates!</h2>
+				<label for="email">E-mail Address:</label>
+				<input type="email" id="email" name="email" size=45 required />
+				<br>
+				<br>
+				<h2>Please let us know if you have any comments or suggestions!</h2>
 				<p>Comments: <textarea cols="55" name="Comment"> </textarea></p>
-				<p><input type="submit" value="Send" name="Submit">
-					<input type="reset" value="Reset" name="Reset">
-				</p>
+
+
+				<p>All your favorite genres selected? Great! Please click "Send". <input type="submit" value="Send" name="Submit"></p>
+				<p>If you want to change your selections, please click "Reset". <input type="reset" value="Reset" name="Reset"></p>
 			</form>
 		</div>
+
+
 	</main>
 
 	<footer>
@@ -124,6 +139,7 @@
 			<p id="byui"><a href="https://www.byui.edu">BYU-Idaho</a></p>
 		</div>
 	</footer>
+
 </body>
 
 </html>

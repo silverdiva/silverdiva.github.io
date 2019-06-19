@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>CIT 261 | #08 CSS3 Transitions</title>
+	<meta charset="utf-8" />
+	<meta name="author" content="Kim Llanos">
+	<link href="css/main.css" type="text/css" rel="stylesheet" />
+	<link href="css/code-fluency.css" type="text/css" rel="stylesheet" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<script src="../scripts/08.js"></script>
+</head>
+
+
+<body>
+	<header>
+		<div id="title">
+			<h3>Kimberly Llanos</h3>
+			<h1>CIT 261:02 Code Fluency</h1>
+		</div>
+
+		<nav>
+			<label for="toggle">Show Menu</label>
+			<input id="toggle" type="checkbox">
+			<ul id="menu">
+				<li><a href="index.html">Home</a></li>
+				<li><a href="assignments.html">Code Assignments</a></li>
+			</ul>
+		</nav>
+	</header>
+
+	<main>
+		<div id="assignment-landing">
+			<h1>Topic #08: CSS3 Transitions, Animations, Transformations Triggered by JS</h1>
+			<h3>Designing, Defining, and Triggering CSS3 Transitions without Custom Libraries (From Scratch)</h3>
+			<p>We can use JavaScript to animate the visibility of things such as titles, paragraph text, and lists.</p>
+			<p>
+				<p>We can then use JavaScript to control the rate or speed at which those things are animated, which is called a transition.</p>
+				<br>
+				<h2>Visibility Transition</h2>
+				<p>In this example, we use JavaScript to "toggle" the 'height' property to control the rate of the 'show/hide visibility' of text.
+					<br><br> The current transition rate to show/hide the text is set at 1200 milliseconds using the CSS3 'transition' property with the associated value of 'height 1200ms ease-in-out;'.
+					<br>
+					<br> If we increase the time to say 2000 milliseconds, then the show/hide transition would be slower.
+					<br> If we decrease the time to say 500 milliseconds, then the show/hide transition would be faster.
+				</p>
+				<p>
+					<a class="visible" href="#example">Click Here to Show the Visibility Transition of a Paragraph</a>
+					<br>
+				</p>
+
+				<div class="visible-content" id="example">
+					Here's some text we want to appear slowly when a link or button is clicked.
+				</div>
+
+
+				<br>
+				<h2>Animated Size & Color Transitions</h2>
+				<div id="div1">Watch How I Change!</div>
+				<p>
+					Watch the background color change, too!
+				</p>
+				<button onclick="myFunction()">Make it Smaller</button>
+				<button onclick="myReturnFunction()">Return It Back to Normal</button>
+				<div id="div2"></div>
+		</div>
+	</main>
+
+	<footer>
+		<div id="footer">
+			<ul class="footer">
+				<p>
+					<a href="https://content.byui.edu/integ/gen/8ef4d036-0d64-4ec1-8ca2-2f3155f06dd4/0/CIT%20261%20-%20Syllabus.html">CIT 261:02 </a>
+				</p>
+				<p>
+					Spring 2019
+				</p>
+				<p>
+					Bro. Johan Baer
+				</p>
+			</ul>
+			<p id="copy">Content &copy; 2019</p>
+			<p id="kim">Kimberly Llanos</p>
+			<p id="byui"><a href="https://www.byui.edu">BYU-Idaho</a></p>
+		</div>
+	</footer>
+</body>
+
+</html>

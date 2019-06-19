@@ -2,12 +2,13 @@
 <html lang="en">
 
 <head>
-	<title>CIT 261 | CSS3 Using JavaScript</title>
+	<title>CIT 261 | Topic #07 CSS3 Using JavaScript</title>
 	<meta charset="utf-8" />
 	<meta name="author" content="Kim Llanos">
 	<link href="css/main.css" type="text/css" rel="stylesheet" />
 	<link href="css/code-fluency.css" type="text/css" rel="stylesheet" />
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<script src="../scripts/07.js"></script>
 
 </head>
 
@@ -34,49 +35,56 @@
 
 	<main>
 		<div id="assignment-landing">
-			<h1>CSS3 Using JavaScript</h1>
+			<h1>Topic #07 CSS3 Using JavaScript</h1>
 			<h3>Manipulating CSS Class Properties Using JavaScript</h3>
 			<p class="image-border-change">
-				<button class="myButtons" type="button">HOVER OVER THE IMAGE to Add a Border.</button>
-			</p>
+				Using "onmouseover" and "onmouseout" to add border styling to an image.</p>
+			<h2>Hover over the image to add a border.
+			</h2>
 		</div>
 
 		<div id="wrapper">
 			<div class="css-manipulation">
 				<div class="left-column">
-					<img id="kim-and-girls" src="/images/rsz_pismo-mom-girls.jpg" onmouseout="borderChangeAgain()" width="50%" onmouseover="borderChange()" alt="Kim and girls at Pizmo Beach">
+					<img id="kim-and-girls" src="/images/rsz_pismo-mom-girls.jpg" onmouseout="borderChangeAgain()" onmouseover="borderChange()" alt="Kim and girls at Pizmo Beach">
 					<script>
+						//change the border styling with onmouseover
 						function borderChange() {
 							document.getElementById("kim-and-girls").style.border = "20px solid red";
 						}
-
+						//revert the border styling back to original with onmouseout 
 						function borderChangeAgain() {
 							document.getElementById("kim-and-girls").style.border = "none";
 							document.getElementById("kim-and-girls").style.borderRadius = "10px";
+							document.getElementById("kim-and-girls").style.width = "50%";
 						}
 					</script>
 
 				</div>
 			</div>
 			<div class="right-column" id="buttons">
-				<p><button id="thisButton" class="myButtons" type="button" onclick="doubleHeight()">Click to make the image larger</button></p>
-				<p><button class="myButtons" type="button" onclick="returnToNormal()">Click to revert back to original size </button></p>
-				<p><button class="myButtons" type="button" onclick="changeRadius()">Click to change the border radius</button></p>
-				<p><button class="myButtons" type="button" onclick="changeColor()">Click to change button text color</button></p>
+				<p> Using "onclick" to change the size and border of an image.</p>
+				<p><button id="thisButton" class="myButtons" type="button" onclick="doubleHeight()">Click here to make the image larger</button></p>
+				<p><button class="myButtons" type="button" onclick="changeRadius()">Click here to change the border radius</button></p>
+				<p><button class="myButtons" type="button" onclick="returnToNormal()">Click here to revert back to original size </button></p>
+				<p> Using "onclick" to change the text color on all the buttons.</p>
+				<p><button class="myButtons" type="button" onclick="changeColor()">Click here to change button text color</button></p>
 				<script>
+					//need to figure out WHY the scripts are only running within the html and not the .js file!!	
+					//onlick changes image height to 75% of original size
 					function doubleHeight() {
 						document.getElementById("kim-and-girls").style.width = "75%";
 					}
-
+					//onlick changes the image border radius
+					function changeRadius() {
+						document.getElementById("kim-and-girls").style.borderRadius = "75px";
+					}
+					//onlick reverts image height back to original size and border radius
 					function returnToNormal() {
 						document.getElementById("kim-and-girls").style.width = "60%";
 						document.getElementById("kim-and-girls").style.borderRadius = "30px";
 					}
-
-					function changeRadius() {
-						document.getElementById("kim-and-girls").style.borderRadius = "75px";
-					}
-
+					//onclick changes the text color of ALL the buttons
 					function changeColor() {
 						var color = prompt("To change the text color on the buttons, just pick a color - ANY color!");
 						var buttons = document.getElementsByClassName('myButtons');
@@ -112,7 +120,7 @@
 			<p id="byui"><a href="https://www.byui.edu">BYU-Idaho</a></p>
 		</div>
 	</footer>
-	<script type="text/javascript" language="javascript" link href="scripts/scripts.js"></script>
+	<script type="text/javascript" language="javascript" link src="../scripts/scripts.js"></script>
 </body>
 
 </html>

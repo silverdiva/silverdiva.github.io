@@ -1,7 +1,22 @@
 /*code fluency page-specific styling*/
 
+/******topic 02-javascript-objects.html styling*********/
+.genre {
+	color: red;
+	font-size: 10px;
+	font-style: italic;
+	font-weight: 600;
+}
 
-/******using javascript.html styling*********/
+.basic-button {
+	width: 20%;
+	height: 20px;
+	font-size: 80%;
+	border-radius: 20px;
+	background-color: orange;
+}
+
+/******topic 07-css3-using-javascript.html styling*********/
 .wrapper {
 	margin-top: 2px;
 	display: -webkit-flex;
@@ -12,6 +27,7 @@
 	display: -webkit-flex;
 	display: flex;
 	flex-wrap: wrap;
+	margin-top: -75px;
 }
 
 .left-column {
@@ -43,10 +59,11 @@ button {
 	background-color: #86af49;
 }
 
+#assignment-landing07 {
+	margin-bottom: 0px;
+}
 
-
-
-/******using transitions.html styling*********/
+/******topic 11-transitions-expanded.html styling*********/
 .visible-content {
 	display: none;
 	height: 0;
@@ -106,7 +123,7 @@ button {
 }
 
 
-/******using 02-javascript-objects.html styling*********/
+/****** topic 02-javascript-objects.html styling *********/
 
 #movieform {
 	margin-bottom: 80px;
@@ -132,4 +149,4 @@ button {
     padding-bottom: 20px;
     color: black;
 }
-}
+

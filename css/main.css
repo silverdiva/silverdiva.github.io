@@ -146,7 +146,7 @@ main {
 
 h3 {
     color: #000;
-    font-family: 'Cookie', cursive;
+    font-family: 'Karma', serif;
 	margin-left: 15px;
 }
 
@@ -155,6 +155,7 @@ h1,
 h2 {
     color: #000;
     font-family: 'Karma', serif;
+	font-style: italic;
 }
 
 

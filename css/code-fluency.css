@@ -76,20 +76,11 @@ button:hover {
 	margin-left: 20px;
 }
 
-button {
-	width: 35%;
-	height: 80px;
-	font-size: 100%;
-	border-radius: 20px;
-	margin: 4px;
-	background-color: #86af49;
-}
-
 #assignment-landing07 {
 	margin-bottom: 0px;
 }
 
-/******topic 8,11,12,13 transit-anim-transf styling*********/
+/******topic 08-EXPANDED-css3-transit-anim-trans.html styling*********/
 .magic-content {
 	display: none;
 	height: 0;
@@ -104,6 +95,20 @@ button {
 	margin-bottom: 90px;
 }
 
+#change, #watch {
+	margin-left: 15px;
+	font-size: 15px;
+	font-weight: 600;
+}
+
+
+span {
+	font-weight: 600;
+	color: fuchsia;
+}
+
+
+/******topic 11-pure-css3-transitions.html styling*********/
 #transition {
 	background: orange;
 	transition: linear 3s;
@@ -112,6 +117,7 @@ button {
 #transition:hover {
 	background: #69BE28;
 }
+
 
 #spin {
 	background: button;
@@ -134,6 +140,25 @@ button {
 	transition: all 5s ease-in-out;
 }
 
+
+#box-button {
+	width: 100px;
+    height: 100px;
+	margin: 10px;
+	border-radius: 0px;
+    background-color: saddlebrown;
+	animation-name: box-button;
+  	animation-duration: 7s;
+}
+
+
+@keyframes box-button {
+	from {background-color: skyblue;}
+  	to {background-color: darkgreen;}
+}
+
+/*global Topics styling*/
+
 #assignment-landing {
 	padding: 0px;
 	margin-bottom: 100px;
@@ -143,15 +168,17 @@ button {
 	margin-top: -40px;
 }
 
-#div1, h2 {
-	margin-left: 15px;
-	font-size: 15px;
-	font-weight: 600;
+
+button {
+	width: 35%;
+	height: 80px;
+	font-size: 100%;
+	border-radius: 20px;
+	margin: 4px;
+	background-color: #86af49;
 }
 
-
-
-span {
-	font-weight: 600;
-	color: fuchsia;
+h2 {
+	margin: 15px;
+	font-size: 18px;
 }

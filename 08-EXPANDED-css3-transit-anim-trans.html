@@ -32,7 +32,7 @@
 	<main>
 		<div id="assignment-landing">
 			<h1>Topic #08: CSS3 Transitions, Animations, Transformations Triggered by JS</h1>
-			<h3>Designing, Defining, and Triggering CSS3 Transitions without Custom Libraries (From Scratch)</h3>
+			<h3>Creating CSS3 Transitions and Animations in CSS and triggering them with JavaScript</h3>
 			<p>We can use JavaScript to animate the visibility of things such as titles, paragraph text, and lists.</p>
 			<p>
 				<p>We can then use JavaScript to control the rate or speed at which those things are animated, which is called a transition.</p>
@@ -50,18 +50,20 @@
 				</p>
 
 				<div class="magic-content" id="magic">
-					Here's some text we want to appear slowly when a link or button is clicked.
+					Here's some text we want to appear slowly when a link or button is clicked as if by <span>MAGIC</span>!
+					<br> 
+					<br>
+					But it's not really <span>magic</span> at all - it is simply some clever 'slight of hand' JavaScript that utilizes the height property and controls the rate at which it is visible!
 				</div>
 
 				<br>
 				<h2>Animated Size & Color Transitions</h2>
-				<div id="div1">****Watch How I Change!*****</div>
+				<div id="change">****Watch How I Change!*****</div>
 				<p class="watch">
 					Watch the <span>PAGE BACKGROUND COLOR </span>change, too!
 				</p>
-				<button onclick="myFunction()">Make Text Smaller</button>
-				<button onclick="myReturnFunction()">Return Back to Normal Size</button>
-				<div id="div2"></div>
+				<button onclick="makeSmaller()">Make Text Smaller</button>
+				<button onclick="makeNormal()">Return Text to Normal Size</button>
 		</div>
 	</main>
 

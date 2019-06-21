@@ -16,6 +16,32 @@
 	background-color: orange;
 }
 
+#movieform {
+	margin-bottom: 80px;
+	margin-top: -90px;
+}
+
+.form-border {
+    border-radius: 5px;
+	/*width:65%;*/
+    height: auto;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    text-align: left;
+    margin: auto;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    background-color: lightcyan;
+    overflow: hidden;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    color: black;
+}
+
+
 /******topic 07-css3-using-javascript.html styling*********/
 .wrapper {
 	margin-top: 2px;
@@ -63,8 +89,8 @@ button {
 	margin-bottom: 0px;
 }
 
-/******topic 11-transitions-expanded.html styling*********/
-.visible-content {
+/******topic 8,11,12,13 transit-anim-transf styling*********/
+.magic-content {
 	display: none;
 	height: 0;
 	overflow: hidden;
@@ -72,7 +98,7 @@ button {
 	margin-left: 15px;
 }
 
-.visible-content.is-visible {
+.magic-content.is-visible {
 	display: block;
 	height: auto;
 	margin-bottom: 90px;
@@ -117,36 +143,15 @@ button {
 	margin-top: -40px;
 }
 
-#div1, h2, button {
+#div1, h2 {
 	margin-left: 15px;
 	font-size: 15px;
+	font-weight: 600;
 }
 
 
-/****** topic 02-javascript-objects.html styling *********/
 
-#movieform {
-	margin-bottom: 80px;
-	margin-top: -90px;
+span {
+	font-weight: 600;
+	color: fuchsia;
 }
-
-.form-border {
-    border-radius: 5px;
-	/*width:65%;*/
-    height: auto;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    text-align: left;
-    margin: auto;
-    margin-left: 10px;
-    margin-right: 10px;
-    margin-bottom: 10px;
-    margin-top: 10px;
-    background-color: lightcyan;
-    overflow: hidden;
-    padding-left: 20px;
-    padding-right: 20px;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    color: black;
-}
-

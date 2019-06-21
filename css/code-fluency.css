@@ -1,3 +1,29 @@
+/*global Topics styling*/
+
+#assignment-landing {
+	padding: 0px;
+	margin-bottom: 100px;
+}
+
+#footer ul {
+	margin-top: -40px;
+}
+
+
+button {
+	width: 35%;
+	height: 80px;
+	font-size: 100%;
+	border-radius: 20px;
+	margin: 4px;
+	background-color: #86af49;
+}
+
+h2 {
+	margin: 15px;
+	font-size: 18px;
+}
+
 /*code fluency page-specific styling*/
 
 /******topic 02-javascript-objects.html styling*********/
@@ -156,28 +182,3 @@ span {
   	to {background-color: darkgreen;}
 }
 
-/*global Topics styling*/
-
-#assignment-landing {
-	padding: 0px;
-	margin-bottom: 100px;
-}
-
-#footer ul {
-	margin-top: -40px;
-}
-
-
-button {
-	width: 35%;
-	height: 80px;
-	font-size: 100%;
-	border-radius: 20px;
-	margin: 4px;
-	background-color: #86af49;
-}
-
-h2 {
-	margin: 15px;
-	font-size: 18px;
-}

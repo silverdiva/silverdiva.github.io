@@ -32,8 +32,8 @@ var hide = function (element) {
 		element.classList.remove('is-visible');
 	}, 1200);
 };
-// Toggle visibility / invisibility of the element
-var magic = function (elem, timing) {
+// switch between visibility / invisibility of the element
+var magic = function (element, timing) {
 	// If visible - hide it
 	if (element.classList.contains('is-visible')) {
 		hide(element);
@@ -52,6 +52,8 @@ document.addEventListener('click', function (event) {
 	// show the magic (toggle between visible and invisible)
 	magic(content);
 }, false);
+
+
 
 
 // */*/*/* Animated Size & Color Transitions code */*/*/* //

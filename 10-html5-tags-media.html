@@ -2,12 +2,13 @@
 <html lang="en">
 
 <head>
-	<title>CIT 261 | HTML5 Tags for Media</title>
+	<title>CIT 261 |Topic #10 HTML5 Tags for Media</title>
 	<meta charset="utf-8" />
 	<meta name="author" content="Kim Llanos">
 	<link href="css/main.css" type="text/css" rel="stylesheet" />
+	<link href="css/code-fluency.css" type="text/css" rel="stylesheet" />
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
-	<script src="scripts/scripts.js"></script>
+	<script src="../scripts/10.js"></script>
 </head>
 
 
@@ -30,12 +31,157 @@
 
 	<main>
 		<div id="assignment-landing">
-			<h1>HTML5 Tags for Media</h1>
-			<h3>HTML5 Tags: Video, Audio, and Canvas</h3>
-			<p>ipsum lorem</p>
+			<h1>Topic #10 HTML5 Tags for Media</h1>
+			<h3>Video, Audio, and Canvas</h3>
+		</div>
+
+		<div id="audio-demo">
+			<h2>Using the HTML5 Audio Tag</h2>
+			<p><span id="span-audio">Using the *control* attribute for audio playback.</span></p>
+			<p>With the *audio* tag we can embed an audio file within our HTML page.
+				<br> Here is a beautiful piano piece by Chad Crouch called "Ginger", which can be found <a href="http://freemusicarchive.org/music/Chad_Crouch/Atmospheric_Piano/Ginger">here.</a></p>
+			<div id="controlled-audio">
+				<p>Using the *audio controls* tag, the embedded audio file has "built-in" controls to play and pause content, fast-forward and reverse it, as well as control the volume."
+					<br>
+					<br> Without adding *control* to the *audio* tag, any embedded content plays automatically, which can be useful for specific situations.</p>
+				<audio controls>
+        			<source src="audio/ChadCrouchGinger.mp3" type="audio/mp3"/>
+        			<source src="audio/ChadCrouchGinger.ogg" type="audio/ogg"/>
+        			<source src="audio/ChadCrouchGinger.m4a" type="audio/m4a"/>
+        			<source src="audio/ChadCrouchGinger.flac" type="audio/flac">
+        			<source src="audio/ChadCrouchGinger.wav" type="audio/wav"/>
+        			<source src="audio/ChadCrouchGinger.wma" type="audio/wma"/>
+        			Sorry, but you are using a browser that does not support the audio tag! Please use the link above to access the audio file.
+      			</audio>
+			</div>
+			<br>
+			<div id="your-Audio">
+				<p><span id="span-audio">Using JavaScript and "onclick" events to control playback.</span></p>
+				<p>We still have an embedded audio file, but instead of using the *control* attribute within the *audio* tag, we can use buttons with "onclick" events to call JavaScript functions to control playback.
+					<audio id="myAudio">
+ 						<source src="audio/ChadCrouchGinger.mp3" type="audio/mp3">
+ 						<source src="audio/ChadCrouchGinger.mp3" type="audio/mp3">
+						Sorry, but you are using a browser that does not support the audio tag! Please use the link above to access the audio file.
+					</audio>
+
+					<p>Click the <span>buttons</span> to play or pause the audio.</p>
+					<button class="basic-button" onclick="playAudio()" type="button">Click to Play Audio</button>
+					<button class="basic-button" onclick="pauseAudio()" type="button">Click to Pause Audio</button>
+			</div>
+			<script>
+				//manual audio file controls
+				var controls = document.getElementById("myAudio");
+
+				function playAudio() {
+					controls.play();
+				}
+
+				function pauseAudio() {
+					controls.pause();
+				}
+			</script>
+		</div>
+		<br>
+		<br>
+
+		<div id="video-demo">
+			<br>
+			<h2>Using the HTML5 Video Tag</h2>
+			<p><span id="span-audio">Using the *control* attribute for video playback.</span></p>
+			<p>Just like with embedding an audio file with automatic controls, we can embed a video file within our HTML page using the same *control* attribute.
+				<br> Here is a beautiful time-lapse from the Pexels site by Felix Mittermeier, which can be found <a href="https://www.pexels.com/video/time-lapse-of-sunset-1110140/"> here.</a></p>
+
+			<video controls height="240" width="425">
+            <source src="video/demo-video.mp4" type="video/mp4">
+        	</video>
+
+			<div id="your-Video">
+				<p><span id="span-audio">Using JavaScript and "onclick" events to control playback.</span></p>
+				<p>Just like the audio file above, we still have our beautiful embedded video file, but instead of using the *control* attribute within the *video* tag, we can use buttons with "onclick" events to call JavaScript functions to control playback.
+					<br>
+					<br>
+					<video id="myVideo2" height="240" width="425">
+ 						<source src="video/demo-video.mp4" type="video/mp4">
+						Sorry, but you are using a browser that does not support the audio tag! Please use the link above to access the audio file.
+					</video>
+
+					<p>Click the <span>buttons</span> to play or pause the video.</p>
+					<button class="basic-button" onclick="playVid()" type="button">Click to Play Video</button>
+					<button class="basic-button" onclick="pauseVid()" type="button">Click to Pause Video</button>
+			</div>
+			<script>
+				//manual video file controls
+				var vcontrol = document.getElementById("myVideo");
+
+				function playVid() {
+					vcontrol.play();
+				}
+
+				function pauseVid() {
+					vcontrol.pause();
+				}
+			</script>
+		</div>
+		<br>
+
+		<div id="canvas-demo">
+			<br>
+			<h2>Using the HTML5 Canvas Tag</h2>
+			<p><span id="span-audio">Do cool things with the *canvas* tag.</span></p>
+			<p>With the *canvas* tag we can make a 'virtual canvas' within an HTML page.
+				<br>
+				<canvas id="myCanvas" width="150" height="150"></canvas>
+				<br>
+				<button class="basic-button" onclick="draw()">Click Here to Draw!</button>
+				<br>
+
+				<script>
+					function draw() {
+						var canvas = document.getElementById('canvas1');
+						if (canvas.getContext) {
+							var ctx = canvas.getContext('2d');
+						}
+					}
+				</script>
+
+
+				<div>
+					<h2>Draw Lines</h2>
+		<canvas id="canvas2" height="200" width="300"></canvas><br>
+		<button class="basic-button" onclick="drawLine()">Draw Lines</button>
+		<button class="basic-button" onclick="drawLine(1)">Clear Lines</button>
+
+				</div>
+				<script>
+			function drawLine(a){
+        var canvas = document.getElementById("can1");
+        var ctx = canvas.getContext("2d");      // works without this line in chrome
+        
+    
+        if (a == 1){
+           ctx.clearRect(0,0,300,200); 
+        }
+        else {
+
+            ctx.shadowOffsetX = -90;
+            ctx.moveTo(0,0);       // jumps to
+            ctx.lineTo(300,200);   // draw to
+        
+            // create multiple lines
+            // endpoints can be off the canvas
+            ctx.moveTo(300,0);
+            ctx.lineTo(0,200);
+        
+            ctx.closePath();
+            // draw lines listed above
+            ctx.stroke();
+            
+        }
+}</script>
+
+
 		</div>
 	</main>
-
 	<footer>
 		<div id="footer">
 			<ul class="footer">

@@ -40,6 +40,7 @@ h2 {
 	font-size: 80%;
 	border-radius: 20px;
 	background-color: orange;
+	margin-left: 10px;
 }
 
 #movieform {
@@ -126,12 +127,37 @@ button:hover {
 	font-weight: 600;
 }
 
-
 span {
 	font-weight: 600;
 	color: fuchsia;
 }
 
+
+/******topic 10-html5-tags-media.html styling*********/
+#span-audio {
+	color: aqua;
+}
+
+
+#audio-demo {
+	margin-top: -70px;
+}
+
+audio, video {
+	margin-left: 15px;
+}
+
+#myVideo2 {
+	margin-left: 0px;
+}
+
+canvas { 
+	border: 3px solid red; 
+}
+
+#canvas2 {
+	border:3px solid red;
+}
 
 /******topic 11-pure-css3-transitions.html styling*********/
 #transition {

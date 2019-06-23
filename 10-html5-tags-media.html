@@ -60,7 +60,6 @@
 				<p>We still have an embedded audio file, but instead of using the *control* attribute within the *audio* tag, we can use buttons with "onclick" events to call JavaScript functions to control playback.
 					<audio id="myAudio">
  						<source src="audio/ChadCrouchGinger.mp3" type="audio/mp3">
- 						<source src="audio/ChadCrouchGinger.mp3" type="audio/mp3">
 						Sorry, but you are using a browser that does not support the audio tag! Please use the link above to access the audio file.
 					</audio>
 
@@ -111,7 +110,7 @@
 			</div>
 			<script>
 				//manual video file controls
-				var vcontrol = document.getElementById("myVideo");
+				var vcontrol = document.getElementById("myVideo2");
 
 				function playVid() {
 					vcontrol.play();
@@ -128,59 +127,106 @@
 			<br>
 			<h2>Using the HTML5 Canvas Tag</h2>
 			<p><span id="span-audio">Do cool things with the *canvas* tag.</span></p>
-			<p>With the *canvas* tag we can make a 'virtual canvas' within an HTML page.
+			<p>With the *canvas* tag we can make a 'virtual canvas' within an HTML page.</p>
+
+			<div id="first-canvas">
+				<canvas id="myCanvas" class="canvas-plain" width="450" height="250"></canvas>
 				<br>
-				<canvas id="myCanvas" width="150" height="150"></canvas>
-				<br>
-				<button class="basic-button" onclick="draw()">Click Here to Draw!</button>
-				<br>
+
 
 				<script>
 					function draw() {
 						var canvas = document.getElementById('canvas1');
 						if (canvas.getContext) {
-							var ctx = canvas.getContext('2d');
+							var line = canvas.getContext('2d');
+						}
+					}
+				</script>
+			</div>
+			<br>
+
+			<div id="2nd-canvas">
+				<h2>Draw Lines</h2>
+				<p>Use JavaScript functions and specialized methods to "draw within the canvas" with onclick events that call functions to render stroke paths text, images, or animations.
+					<br> This is a very simple canvas that utilizes the "moveTo(), lineTo(), closePath(), and stoke()" methods to "draw" a simple set of intersecting lines.</p>
+				<div id="second-canvas">
+					<canvas id="canvas2" height="200" width="300" style="border:1px solid #000000"></canvas><br>
+					<button class="basic-button" onclick="drawLine()">Draw Lines</button>
+					<button class="basic-button" onclick="drawLine(1)">Clear Lines</button>
+				</div>
+				<script>
+					function drawLine(draw) {
+						var canvas = document.getElementById("canvas2");
+						var line = canvas.getContext("2d");
+
+						if (draw == 1) {
+							//set (x, y, width, height) for our line strokes
+							line.clearRect(0, 0, 300, 200);
+						} else {
+							//sets 1st set of x, y stroke path (stright-line) points
+							line.moveTo(0, 0);
+							line.lineTo(300, 200);
+
+							//(mirror of above stroke paths, but in opposite start-end positions)
+							line.moveTo(300, 0);
+							line.lineTo(0, 200);
+
+							line.closePath();
+							// the stroke() method actually draws the set path of stroke lines above 
+							line.stroke();
+
 						}
 					}
 				</script>
 
+			</div>
+			<br>
+			<div id="third-canvas">
+				<h2>Draw Styled Lines</h2>
+				<p>Style the stoke paths using the "strokestype" property and methods such as "createLinearGradient()" and "addColorStop()" to give your coloring some pizzaz. </p>
+				<canvas id="canvas3" height="200" width="300"></canvas><br>
+				<button class="basic-button" onclick="drawLines()">Draw Lines</button>
 
-				<div>
-					<h2>Draw Lines</h2>
-		<canvas id="canvas2" height="200" width="300"></canvas><br>
-		<button class="basic-button" onclick="drawLine()">Draw Lines</button>
-		<button class="basic-button" onclick="drawLine(1)">Clear Lines</button>
-
-				</div>
 				<script>
-			function drawLine(a){
-        var canvas = document.getElementById("can1");
-        var ctx = canvas.getContext("2d");      // works without this line in chrome
-        
-    
-        if (a == 1){
-           ctx.clearRect(0,0,300,200); 
-        }
-        else {
+					function drawLines(line) {
+						var canvas = document.getElementById("canvas3");
+						var line = canvas.getContext("2d");
 
-            ctx.shadowOffsetX = -90;
-            ctx.moveTo(0,0);       // jumps to
-            ctx.lineTo(300,200);   // draw to
-        
-            // create multiple lines
-            // endpoints can be off the canvas
-            ctx.moveTo(300,0);
-            ctx.lineTo(0,200);
-        
-            ctx.closePath();
-            // draw lines listed above
-            ctx.stroke();
-            
-        }
-}</script>
+						if (line == 1) {
+							//set x, y, width, height for our line strokes
+							line.clearRect(0, 0, 300, 200);
 
+						} else {
+							// Fills strokes with color gradients
+							var gradient = line.createLinearGradient(0, 0, 170, 170);
+							line.strokeStyle = gradient;
+							line.lineWidth = 5;
+							gradient.addColorStop("0", "#66ff99");
+							gradient.addColorStop("0.75", "#ff9900");
+							gradient.addColorStop(".85", "#00ffff");
+							gradient.addColorStop(".90", "#66ff98");
 
+							//sets 1st set of x, y stroke path (stright-line) points
+							line.moveTo(0, 0);
+							line.lineTo(300, 200);
+
+							//(mirror of above stroke paths, but in opposite start-end positions)
+							line.moveTo(300, 0);
+							line.lineTo(0, 200);
+
+							line.closePath();
+							// the stroke() method actually draws the set path of stroke lines above 
+							line.stroke();
+						}
+					}
+				</script>
+			</div>
 		</div>
+		<br>
+		<br>
+
+
+
 	</main>
 	<footer>
 		<div id="footer">

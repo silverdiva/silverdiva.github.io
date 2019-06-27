@@ -9,7 +9,6 @@
 	margin-top: -40px;
 }
 
-
 button {
 	width: 35%;
 	height: 80px;
@@ -26,15 +25,9 @@ h2 {
 
 
 
-
-
-
-
-
-
-
-
-/*code fluency page-specific styling*/
+/*************************************************************************/
+/*********************code fluency page-specific styling******************/
+/*************************************************************************/
 
 
 /******topic 02-javascript-objects.html styling*********/
@@ -82,12 +75,130 @@ h2 {
 
 
 
+/***************topic 03-json.html & 
+topic 04-ajax.html styling**********/
 
+#assignment-landing-03-04 {
+	margin-bottom: 70px;
+}
 
+#search-header,
+#JSON-format {
+	margin-left: 15px;
+}
 
+#search-header h3 {
+	margin: -20px 0px 15px 0px;
+	text-shadow: 0 0 2px #52bbc7;
+}
 
+#city-name {
+	text-shadow: 0 0 2px black;
+}
 
+#JSON-format h3,
+#stringified-format h3 {
+	margin-bottom: 0px;
+}
 
+#search-header h2,
+#JSON-format h2 {
+	font-family: 'Montserrat', sans-serif;
+	font-style: normal;
+	font-size: 30px;
+}
+
+#search-header h2 {
+	margin-bottom: 0px;
+}
+
+#JSON-format {
+	margin-top: -20px;
+}
+
+#search {
+	position: relative;
+	left: 50%;
+	top: 50%;
+	-webkit-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+}
+
+#search-btn-2 {
+	background-color: #52bbc7;
+	max-width: 80px;
+	max-height: 30px;
+}
+
+#search-txt {
+	color: red;
+	height: 30px;
+	border-radius: 10px;
+	border-style: none;
+	outline: none;
+	padding-right: 1px;
+	padding-left: 1px;
+	text-align: center;
+}
+
+.city-icon-holder {
+	margin-bottom: 20px;
+}
+
+#city-name {
+	font-family: "Courier New";
+	font-size: 30px;
+	font-weight: bold;
+	color: #52bbc7;
+	margin-left: 25px;
+}
+
+#icon {
+	max-width: 50%;
+	margin-left: 50px;
+}
+
+.city-icon {
+	height: 80%;
+	width: 50%;
+}
+
+.weather-details {
+	font-style: italic;
+}
+
+span.function-span {
+	font-style: normal;
+	color: black;
+}
+
+.temperature,
+.humidity {
+	margin-left: 15px;
+}
+
+#temp,
+#humidity-div {
+	font-weight: 900;
+	text-shadow: 0 0 2px #52bbc7;
+	
+}
+
+#stringified-format {
+	margin-left: 15px;
+	margin-bottom: 60px;
+}
+
+#stringified {
+	margin-left: 15px;
+	margin-bottom: 20px;
+}
+
+.json-image {
+	max-width: 50%;
+	max-height: 50%;
+	margin-left: 15px;
+}
 
 
 /******topic 07-css3-using-javascript.html styling*********/
@@ -132,13 +243,6 @@ button:hover {
 
 
 
-
-
-
-
-
-
-
 /******topic 08-EXPANDED-css3-transit-anim-trans.html styling*********/
 
 .magic-content {
@@ -166,12 +270,6 @@ span {
 	font-weight: 600;
 	color: fuchsia;
 }
-
-
-
-
-
-
 
 
 
@@ -228,11 +326,6 @@ video {
 	border: 8px solid orange;
 	margin-left: 15px;
 }
-
-
-
-
-
 
 
 

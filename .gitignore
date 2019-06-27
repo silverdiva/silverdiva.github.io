@@ -1,6 +1,9 @@
 # working/test files
 *.obsolete
 
+#dev-cit261
+dev-cit261
+
 # Logs
 logs
 *.log

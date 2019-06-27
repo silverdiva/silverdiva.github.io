@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>CIT 261 | Topic #'s 3 & 4: JSON/AJAX </title>
+	<meta charset="utf-8" />
+	<meta name="author" content="Kim Llanos">
+	<link href="css/main.css" type="text/css" rel="stylesheet" />
+	<link href="css/code-fluency.css" type="text/css" rel="stylesheet" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+
+
+<body>
+	<header>
+		<div id="title">
+			<h3>Kimberly Llanos</h3>
+			<h1>CIT 261:02 Code Fluency</h1>
+		</div>
+
+		<nav>
+			<label for="toggle">Show Menu</label>
+			<input id="toggle" type="checkbox">
+			<ul id="menu">
+				<li><a href="index.html">Home</a></li>
+				<li><a href="assignments.html">Code Assignments</a></li>
+			</ul>
+		</nav>
+	</header>
+
+	<main>
+		<div id="assignment-landing-03-04">
+			<h1>Topic #3 JSON | Topic #4 AJAX</h1>
+			<h3>JSON Parse, Stringify | Using XMLHTTPRequest to Consume a JSON Web Service</h3>
+			<p>Using AJAX XMLHTTPRequest, I am connecting to the OpenWeatherMap.org API web service to grab a JSON object for current weather conditions based on a user-input search string.
+				<br>
+				<br> Using stringify, the returned JSON object is parsed into readable format and displayed as the current temperature and humidity values.</p>
+		</div>
+<div id="weather-wrapper">
+		<div id="search-header">
+		<h3>Enter the name of a city i.e. London, Santa Barbara, Buenos Aires</h3>
+			<div id="search">
+				<input type="text" placeholder="Enter City Name" id="search-txt">
+				<button id="search-btn-2" class="search-btn-2">Search</button>
+			</div>
+
+			<h2>Your City</h2>
+			<div class="city-icon">
+
+				<div class="city-icon-holder">
+					<div id="city-name"></div>
+					<img src="" alt="" id="icon">
+				</div>
+			</div>
+		</div>
+
+		<div id="JSON-format">
+			<h2>Weather Details</h2>
+			<p>A few things are going on in the background:</p>
+			<ul class="weather-details">
+				<li>User input (string value in the search box) triggers the <span class="function-span">"findWeatherDetails()"</span> function.</li>
+				<li>Which pulls weather data from the OpenWeatherMap.org web service API as a raw JSON object via the<span class="function-span"> "theResponse(response)"</span> function. </li>
+
+				<li>The raw JSON object (e.g. <span class="function-span">"jsonObject.name/ .temp/ .humidity" </span>) is parsed into a Javascript object via the <span class="function-span">"JSON.parse(response)"</span> method.</li>
+				<li>The parsed JS values are attached to ID's within the HTML referenced by the <span class="function-span">"xx.innerHTML" </span>property, and called using the <span class="function-span">"document.getElementById()"</span> method to display these nicely formatted values:</li>
+				<ul>
+					<li>cityname <span class="function-span">(document.getElementById("icon")</span></li>
+					<li>weather-type icon <span class="function-span">(document.getElementById("icon")</span></li>
+					<li>temperature <span class="function-span">(document.getElementById("temp")</span></li>
+					<li>humidity <span class="function-span">document.getElementById("humidity-div")</span></li>
+				</ul>
+				<li>The " <span class="function-span"> JSON.stringify(response)</span>" method displays the JS object as a string.</li>
+			</ul>
+			<h3 class="parsed-format-h3">Parsed Format [ JSON.parse(response) ]</h3>
+			<div class="temperature">
+				<div id="temp"></div>
+			</div>
+
+			<div class="humidity">
+				<div id="humidity-div"></div>
+			</div>
+		</div>
+		<br>
+
+		<div id="stringified-format">
+			<h3 class="stringified-format-h3">Stringified Format [ JSON.stringify(response) ]</h3>
+			<div class="" id="stringified">
+			</div>
+			<br>
+			<p>Here is an image of the raw JSON file for city = London from OpenWeatherMap.org API</p>
+			<img class="json-image" src="images/london-raw-jason.JPG">
+		</div>
+</div>
+	</main>
+
+	<footer>
+		<div id="footer">
+			<ul class="footer">
+				<p>
+					<a href="https://content.byui.edu/integ/gen/8ef4d036-0d64-4ec1-8ca2-2f3155f06dd4/0/CIT%20261%20-%20Syllabus.html">CIT 261:02 </a>
+				</p>
+				<p>
+					Spring 2019
+				</p>
+				<p>
+					Bro. Johan Baer
+				</p>
+			</ul>
+			<p id="copy">Content &copy; 2019</p>
+			<p id="kim">Kimberly Llanos</p>
+			<p id="byui"><a href="https://www.byui.edu">BYU-Idaho</a></p>
+		</div>
+	</footer>
+	<script src="scripts/03-04.js"></script>
+</body>
+
+</html>

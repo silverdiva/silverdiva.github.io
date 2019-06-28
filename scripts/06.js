@@ -1,3 +1,5 @@
+/*JS for Topic #6 DOM Manipulation*/
+
 //createElement(), appendChild() methods
 //<div id="create-and-append">
 function createImage() {

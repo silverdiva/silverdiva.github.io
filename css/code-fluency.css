@@ -25,6 +25,7 @@ h2 {
 
 
 
+
 /*************************************************************************/
 /*********************code fluency page-specific styling******************/
 /*************************************************************************/
@@ -72,6 +73,7 @@ h2 {
 	padding-bottom: 20px;
 	color: black;
 }
+
 
 
 
@@ -181,7 +183,6 @@ span.function-span {
 #humidity-div {
 	font-weight: 900;
 	text-shadow: 0 0 2px #52bbc7;
-	
 }
 
 #stringified-format {
@@ -200,6 +201,144 @@ span.function-span {
 	margin-left: 15px;
 }
 
+
+
+/*********topic 06-DOM.html styling*************/
+
+#DOM-headers {}
+
+span.method-desc {
+	font-style: italic;
+	color: black;
+}
+
+.append,
+.insert,
+.remove {
+	font-style: italic;
+	margin-bottom: 0px;
+}
+
+.method-paragraph {
+	margin-top: 0px;
+}
+
+
+.basic-button3 {
+	width: 30%;
+	height: 30px;
+	font-size: 80%;
+	border-radius: 20px;
+	background-color: orange;
+	margin-left: 10px;
+}
+
+
+.click-me-text {
+	font-size: 15px;
+	color: fuchsia;	
+	font-weight: 900;
+	margin-bottom: -10px;
+}
+
+.special-text {
+	font-size: 13px;
+	color:fuchsia;
+}
+
+.special-text2 {
+	font-size: 15px;
+	color: black;
+}
+
+.special-text3 {
+	font-size: 15px;
+	color:fuchsia;
+}
+
+.method-desc2 {
+	font-size: 13px;
+	font-style: italic;
+	color: black;
+}
+
+#myElement {
+	width: 80px;
+	height: 100px;
+	border: 2px solid red;
+	padding: 3px;
+	margin-left: 15px;
+	background-color: aquamarine;
+}
+
+a {
+	text-decoration: none;
+}
+
+#insertBefore-and-append,
+#remove-and-append {
+	/*width: 50%;
+	height: 50%;*/
+	margin-top: 70px;
+}
+
+#elem1,
+#elem2,
+#elem3,
+#elem4 {
+	width: 160px;
+	height: 40px;
+	padding: 3px;
+	margin-bottom: 20px;
+	margin-top: 20px;
+	margin-left: 15px;
+}
+
+#elem1 {
+	border: 2px solid orange;
+	padding: 3px;
+	background-color: deepskyblue;
+	color: aliceblue;
+}
+
+#elem2 {
+	border: 2px solid red;
+	padding: 3px;
+	background-color: darkolivegreen;
+	color: aliceblue;
+}
+
+#elem3 {
+	border: 2px solid skyblue;
+	padding: 3px;
+	background-color: darkgoldenrod;
+	color: aliceblue;
+}
+
+#elem4 {
+	border: 2px solid yellow;
+	padding: 3px;
+	background-color: darkslateblue;
+	color: aliceblue;
+}
+
+
+.basic-button2 {
+	width: 40%;
+	height: 50px;
+	font-size: 80%;
+	font-weight: bold;
+	border-radius: 10px;
+	border: black;
+	color: black;
+	background-color: lightgray;
+	margin-left: 10px;
+	box-shadow: 5px 3px 5px #888888;
+}
+
+.basic-button2:hover {
+	background-color: orange;
+}
 
 /******topic 07-css3-using-javascript.html styling*********/
 
@@ -243,6 +382,7 @@ button:hover {
 
 
 
+
 /******topic 08-EXPANDED-css3-transit-anim-trans.html styling*********/
 
 .magic-content {
@@ -270,6 +410,7 @@ span {
 	font-weight: 600;
 	color: fuchsia;
 }
+
 
 
 
@@ -326,6 +467,7 @@ video {
 	border: 8px solid orange;
 	margin-left: 15px;
 }
+
 
 
 

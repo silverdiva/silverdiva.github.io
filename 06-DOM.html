@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>CIT 261 | Topic #6 DOM Mehtods</title>
+	<meta charset="utf-8" />
+	<meta name="author" content="Kim Llanos">
+	<link href="css/main.css" type="text/css" rel="stylesheet" />
+	<link href="css/code-fluency.css" type="text/css" rel="stylesheet" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<script src="scripts/06.js"></script>
+</head>
+
+
+<body>
+	<header>
+		<div id="title">
+			<h3>Kimberly Llanos</h3>
+			<h1>CIT 261:02 Code Fluency</h1>
+		</div>
+
+		<nav>
+			<label for="toggle">Show Menu</label>
+			<input id="toggle" type="checkbox">
+			<ul id="menu">
+				<li><a href="index.html">Home</a></li>
+				<li><a href="assignments.html">Code Assignments</a></li>
+			</ul>
+		</nav>
+	</header>
+
+	<main>
+		<div id="assignment-landing">
+			<h1>Topic #6 DOM Methods</h1>
+			<h3>DOM Manipulation Using createElement, appendChild, insertBefore, removeChild, methods.</h3>
+			<br>
+
+			<div id="DOM-headers">
+				<div id="create-and-append">
+					<h3 class="append">creatheElement() & appendChild() methods</h3>
+					<p class="method-paragraph">Here is a simple demonstration of the <span class="method-desc">appendChild()</span> method, which will attach or 'append' an item to the end of a list or group of items.
+						<br> <br>Before we can use the <span class="method-desc">appendChild()</span> method, we will create an item using the <span class="method-desc">createElement()</span> method; then we can 'append' it by adding to it.</p>
+
+					<p class="click-me-text">Click below to see what appears!</p>
+
+					<br>
+					<button class="basic-button3" onclick="createImage()">Create an Element</button>
+				</div>
+				<div>
+					<p class="alert-text"><span class="special-text">**Every time you click (after that <span class="special-text2">1st </span>click), you are adding an additional element i.e. "appending" the grouping of elements. This is done by using the</span> <span class="method-desc2">appendChild()</span> <span class="special-text">method.**</span></p>
+				</div>
+
+				<div id="insertBefore-and-append">
+					<h3 class="insert">insertBefore() & appendChild() methods</h3>
+					<p class="method-paragraph">Now we are going to 'add' something to a specific 'location' using more fancy JavaScript methods.
+						<br>
+						<p>Here is a simple demonstration of a new element being inserted within a group of elements; placement of the element is based on the node index. In this case, <span class="special-text3">before </span>the 2nd one.
+							<br>
+							<br> This is accomplished via the <span class="method-desc">insertBefore()</span> and <span class="method-desc">appendChild()</span> methods + the <span class="method-desc">.childNodes[ ]</span> property.
+						</p>
+						<div id="insertElem">
+							<button id="elem1" href="#elem1">I'm the 1st Element!</button>
+							<br>
+							<button id="elem2" href="#elem2">I'm the 2nd Element!</button>
+							<br>
+							<button id="elem3" href="#elem3">I'm the 3rd Element!</button>
+							<br>
+							<button id="elem4" href="#elem4">I'm the 4th Element!</button>
+							<br>
+							<button class="basic-button2" type="submit" onclick="insertBeforeElement()">Insert something before Element #2</button>
+						</div>
+				</div>
+
+				<div id="remove-and-append">
+					<h3 class="remove">removeChild()</h3>
+					<p>Now that we've created and element, appended an element, and inserted an element - let's see if we can remove an element with some more fancy JavaScript.
+						<br>
+						<br> Here is a simple demonstration where we remove an element and then add it back again.
+						<br>
+						<br> This is accomplished via the <span class="method-desc">removeChild()</span> and <span class="method-desc">appendChild()</span> methods.
+						<br>
+						<p class="alert-text"><span class="special-text">**We really like appending our child elements!**</span></p>
+						<br>
+						<div id="elemContainer"><a id="myElement" href="">I'm an Element!</a></div>
+						<br>
+						<br>
+						<button class="basic-button3 "onclick="removeElement();">Remove It!</button>
+						<br>
+						<br>
+						<button class="basic-button3" onclick="insertElement();">Add it Back!</button>
+
+				</div>
+			</div>
+		</div>
+	</main>
+
+	<footer>
+		<div id="footer">
+			<ul class="footer">
+				<p>
+					<a href="https://content.byui.edu/integ/gen/8ef4d036-0d64-4ec1-8ca2-2f3155f06dd4/0/CIT%20261%20-%20Syllabus.html">CIT 261:02 </a>
+				</p>
+				<p>
+					Spring 2019
+				</p>
+				<p>
+					Bro. Johan Baer
+				</p>
+			</ul>
+			<p id="copy">Content &copy; 2019</p>
+			<p id="kim">Kimberly Llanos</p>
+			<p id="byui"><a href="https://www.byui.edu">BYU-Idaho</a></p>
+		</div>
+	</footer>
+</body>
+
+</html>

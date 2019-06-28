@@ -8,13 +8,7 @@
 	<link href="css/main.css" type="text/css" rel="stylesheet" />
 	<link href="css/code-fluency.css" type="text/css" rel="stylesheet" />
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
-	<script src="../scripts/07.js"></script>
-
 </head>
-
-
-<!--<body onload="document.body.className = 'javascript'">
--->
 
 <body>
 	<header>
@@ -49,19 +43,6 @@
 			<div class="css-manipulation">
 				<div class="left-column">
 					<img id="kim-and-girls" src="/images/rsz_pismo-mom-girls.jpg" onmouseout="borderChangeAgain()" onmouseover="borderChange()" alt="Kim and girls at Pizmo Beach">
-					<script>
-						//change the border styling with onmouseover
-						function borderChange() {
-							document.getElementById("kim-and-girls").style.border = "20px solid red";
-						}
-						//revert the border styling back to original with onmouseout 
-						function borderChangeAgain() {
-							document.getElementById("kim-and-girls").style.border = "none";
-							document.getElementById("kim-and-girls").style.borderRadius = "10px";
-							document.getElementById("kim-and-girls").style.width = "50%";
-						}
-					</script>
-
 				</div>
 			</div>
 			<div class="right-column" id="buttons">
@@ -71,37 +52,8 @@
 				<p><button class="myButtons" type="button" onclick="returnToNormal()">Click here to revert back to original size </button></p>
 				<p> (Topic#7) Here I use an "onclick" event to call a JavaScript function to manipulate a css class ("myButton"), which changes the text color on all the buttons!</p>
 				<p><button class="myButtons" type="button" onclick="changeColor()">Click here to change button text color</button></p>
-				<script>
-					//need to figure out WHY the scripts are only running within the html and not the .js file!!	
-					//onlick changes image height to 75% of original size
-					function doubleHeight() {
-						document.getElementById("kim-and-girls").style.width = "75%";
-					}
-					//onlick changes the image border radius
-					function changeRadius() {
-						document.getElementById("kim-and-girls").style.borderRadius = "75px";
-					}
-					//onlick reverts image height back to original size and border radius
-					function returnToNormal() {
-						document.getElementById("kim-and-girls").style.width = "60%";
-						document.getElementById("kim-and-girls").style.borderRadius = "30px";
-					}
-					//onclick changes the text color of ALL the buttons
-					function changeColor() {
-						var color = prompt("To change the text color on the buttons, just pick a color - ANY color!");
-						var buttons = document.getElementsByClassName('myButtons');
-
-						for (var i = 0; i < buttons.length; i++) {
-							buttons[i].style.color = color;
-						}
-					}
-				</script>
 			</div>
 		</div>
-
-
-
-
 	</main>
 
 	<footer>
@@ -122,7 +74,7 @@
 			<p id="byui"><a href="https://www.byui.edu">BYU-Idaho</a></p>
 		</div>
 	</footer>
-	<script type="text/javascript" language="javascript" link src="../scripts/scripts.js"></script>
+	<script src="../scripts/09.js"></script>
 </body>
 
 </html>

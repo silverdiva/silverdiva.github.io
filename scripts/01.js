@@ -48,7 +48,7 @@ function assocArray() {
 /*functions*/
 //<div id="3-js-math-function">
 //<form id="calc">
-function updateOutput() {
+function mathOutput() {
 	//calculate
 	//get form
 	var form = document.getElementById("calc");

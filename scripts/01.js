@@ -1,7 +1,7 @@
 /*javascript for topic #1*/
 
-//simple sort array
-//<div id="simple-array">
+/*simple sort array*/
+//<div id="1-simple-sorted-array">-
 function simpleSortArray() {
 	//form input values
 	var a = document.getElementById('array1').value;
@@ -21,9 +21,8 @@ function simpleSortArray() {
 	document.getElementById("array-output-div").innerHTML = dreamVacay.join("<br>");
 }
 
-
-//assoc array
-//<div id="assoc-array">
+//*assoc array*/
+//<div id="2-assoc-array">
 function assocArray() {
 	//form input values
 	var fname = document.getElementById("assocValue1").value;
@@ -46,7 +45,8 @@ function assocArray() {
 	}
 }
 
-//functions
+/*functions*/
+//<div id="3-js-math-function">
 //<form id="calc">
 function updateOutput() {
 	//calculate
@@ -82,7 +82,8 @@ function updateOutput() {
 	}
 }
 
-//conditional statements
+/*conditional statements*/
+//<div id="4-conditional-stmt">
 //<form id="dinnerAssignments">
 function wardDinner() {
 	//form input values

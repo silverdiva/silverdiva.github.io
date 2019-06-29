@@ -6,8 +6,9 @@
 	<meta charset="utf-8" />
 	<meta name="author" content="Kim Llanos">
 	<link href="css/main.css" type="text/css" rel="stylesheet" />
+	<link href="css/code-fluency.css" type="text/css" rel="stylesheet" />
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
-	<script src="scripts/scripts.js"></script>
+	<script src="scripts/05.js"></script>
 </head>
 
 
@@ -32,8 +33,74 @@
 		<div id="assignment-landing">
 			<h1>Local Storage</h1>
 			<h3>Local Storage API, Storing and Retrieving Simple Data, Arrays, Associative Arrays, and Objects</h3>
-			<p>ipsum lorem</p>
 		</div>
+
+		<div id="storeName">
+			<h3>Store Your Name Locally</h3>
+			<h2>Check if anything is stored in localStorage.firstname and localStorage.lastname</h2>
+			<p>Without entering any values into the form fields, there will be no output.
+			<br>
+			<br>Once values have been entered, you can 'check' them </p>
+			<div class="outputdivs" id="outputDiv_check_local_storage"></div><br>
+			<button type="submit" onclick="checkLocalStorage()">Check Local Storage</button>
+
+
+			<h3>Enter variables to store in localStorage.firstname and localStorage.lastname</h3>
+			<p>
+			<br>Be sure to click 'store information in local storage.' then click 'check local storage' to see your name appear.
+			<br>
+			Next, either close the browser or refresh the page and your name will appear after you 'check local storage' again!</p>
+			<div name="locallyStored" id="locallyStored">
+				<p>First Name <input type="text" id="first_name" size="50"></p>
+				<p>Last Name <input type="text" id="last_name" size="50"></p>
+				<button type="submit" onclick="storeLocally()">Store information in Local Storage</button>
+			</div>
+			<div class="outputdivs" id="outputDiv_local_storage"></div>
+		</div>
+
+		<hr>
+
+		<div id="storeColor">
+			<div>
+				<h2>Local Storage</h2>
+				<p>Select a color below and it will save locally.<br>
+					<br>Then either close the browser or refresh the page and your selected color choice will remain in the selection box!
+				<label id="chooseColor" for="bgcolor">Choose a color:</label>
+				<input class="color" id="bgcolor" value="FFFFFF" autocomplete="off"></p>
+				<p>Examples:</p>
+				<p>Red #FF0000</p>
+				<p>Black #000000</p>
+				<p>Blue #0000FF</p>
+				<p>Green #008000</p>
+			</div>
+		</div>
+		
+		<script>
+			//<div id="storeColor">
+			// Storing the color in local storage
+			var htmlElem = document.querySelector('html');
+			var bgcolorForm = document.getElementById('bgcolor');
+
+			if (!localStorage.getItem('bgcolor')) {
+				populateColorStorage();
+			} else {
+				setStyles();
+			}
+
+			function populateColorStorage() {
+				localStorage.setItem('bgcolor', document.getElementById('bgcolor').value);
+				setStyles();
+			}
+
+			// Retrieving the color from local storage
+			function setStyles() {
+				var currentColor = localStorage.getItem('bgcolor');
+				document.getElementById('bgcolor').value = currentColor;
+				htmlElem.style.backgroundColor = '#' + currentColor;
+			}
+
+			bgcolorForm.onchange = populateColorStorage;
+		</script>
 	</main>
 
 	<footer>

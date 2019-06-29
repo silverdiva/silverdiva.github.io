@@ -115,10 +115,7 @@ h2 {
 
 /*************topic 03-json.html styling**********/
 
-
 /*&*/
-
-
 /*************topic 04-ajax.html styling**********/
 
 #assignment-landing-03-04 {
@@ -242,6 +239,21 @@ span.function-span {
 	margin-left: 15px;
 }
 
+
+
+/***********topic 05-local-storage.html styling*************/
+#storeColor {
+	margin-bottom: 60px;
+}
+
+
+#outputDiv_check_local_storage {
+   margin-left: 25px:
+}
+
+#chooseColor {
+   margin-left: 25px:	
+}
 
 
 

@@ -6,11 +6,9 @@
 	<meta charset="utf-8" />
 	<meta name="author" content="Kim Llanos">
 	<link href="css/main.css" type="text/css" rel="stylesheet" />
+	<link href="css/code-fluency.css" type="text/css" rel="stylesheet" />
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
-	<script src="scripts/scripts.js"></script>
-	<script src="scripts/math.js"></script>
-	<script src="scripts/math2.js"></script>
-	<script src="scripts/calculate.js"></script>
+	<script src="scripts/01.js"></script>
 </head>
 
 
@@ -35,45 +33,109 @@
 		<div id="assignment-landing">
 			<h1>JavaScript</h1>
 			<h3>Loops, Conditional Statements, Functions, Variables, Parameters, Arrays, Associative Arrays</h3>
-			<p>ipsum lorem</p>
-		</div>
-		<div id="assignment-landing">
-			<h1>JavaScript Loops: Math Functions</h1>
-			<p>Enter a number into each field and select your math function.</p>
-			<!--<form action="scripts/math.js">-->
-			<form>
-				Num 1<br/>
-				<input id="num1" name="num1" /><br/> Num 2<br/>
-				<input id="num2" name="num2" /><br/>
+
+
+			<div id="1-simple-sorted-array">
+				<h2>A Simple Sorted Array </h2>
+				<p>Here is a demonstration of a simple 5-item JavaScript array based on user-input values, which sorts them alphabetically via an onclick event attached to a button that triggers the simpleSortArray() function.
+					<br>
+					<div id="simple-array-form">
+						<h3 class="javascript-basic">Add 5 dream-vacation locales!</h3>
+						<p>
+							<input type="text" id="array1" size="20">
+							<br><input type="text" id="array2" size="20">
+							<br><input type="text" id="array3" size="20">
+							<br><input type="text" id="array4" size="20">
+							<br><input type="text" id="array5" size="20"></p>
+						<button class="basic-button3" type="submit" onclick="simpleSortArray()">Sort!</button>
+						<h3 class="javascript-basic">Plan your vacations in this order:</h3>
+						<div id="array-output-div"></div>
+				</div>
+			</div>
+
+			<div id="2-assoc-array">
+				<h2>Associative Array</h2>
+				<p> Here is a Demonstration of an associative array with indexed values that displays the key/value pairs via an onclick event attached to a button that triggers the assocArray() function. </p>
+				<h3 class="javascript-basic">Please enter your details.</h3>
+				
+					<div id="indexed-assoc-array">
+						<div>First Name: </div><input type="text" id="assocValue1" size="20">
+						<br>
+						<div>Last Name: </div><input type="text" id="assocValue2" size="20">
+						<br>
+						<div>Age: </div><input type="text" id="assocValue3" size="20">
+						<br>
+						<div>Gender: </div><input type="text" id="assocValue4" size="20">
+						<br>
+						<br>
+						<div><button type="submit" class="basic-button3" onclick="assocArray()">Display Value-Key Associative Array</button></div>
+						<div id="resultAssocArray"></div>
+					</div>
+			</div>
+
+
+			<div id="3-js-math-function">
+				<h2>JavaScript Math Function (Variables, Parameters)</h2>
+				<p>Here is a demonstration of a JavaScript function that calculates 2 numbers based on the selected math operator.
+					<br>Variables within the function include:</p>
+				<ul id="math-list">
+					<li>var form: uses the document.getElementById() method to target our math form form (form id="calc")</li>
+					<li>var out: defines the results based on the selected math operator</li>
+					<li>var num1, num2: defines the input type for the 1st and 2nd numbers as a "mumber"</li>
+					<li>var operator: defines math operations based upon user-selection; uses a switch statement with cases for the following</li>
+					<ul>
+						<li>add</li>
+						<li>subtract</li>
+						<li>multiply</li>
+						<li>divide</li>
+					</ul>
+				</ul>
+				<h3 class="javascript-basic">Enter a number into each field and select your math function.</h3>
+
+
+				<!--<form action="updateOutput()">-->
+				<form id="calc" oninput="updateOutput()">
+					<input name="num1" value="0" type="number">
+					<select name="operator" onchange="updateOutput()">
+				<option value="0">+</option>
+				<option value="1">−</option>
+				<option value="2">×</option>
+				<option value="3">÷</option>
+			</select>
+					<input name="num2" value="0" type="number">
+					<br>
+					<br>
+					<div class="equals">Equals:</div>
+					<br>
+					<output name="result" for="num1 num2" class="javascript-basic">0</output>
+				</form>
+				<br style="clear:both;">
+			</div>
+
+		
+			<div id="4-conditional-stmt">
+				<h2>Conditional JavaScript Statements</h2>
+				<p>Here is a demonstration of a JavaScript conditional statement that uses 2 variables (name, age).
+					<br> A specific message is displayed based on the age variable.
+					<br> The age variable uses conditional 'if', 'else if' statements to group the name variable based on these age-ranges:</p>
+				<ul id="age-list">
+					<li>ages 7 or less</li>
+					<li>ages 8 to 11</li>
+					<li>ages 12 to 17</li>
+					<li>ages 18 to 30</li>
+					<li>ages 31 to 60</li>
+					<li>ages over 60</li>
+				</ul>
+				<h3 class="javascript-basic">Get Ward Dinner Assignments!</h3>
+				<form id="dinnerAssignments">
+					<p>Enter your name and age for ward dinner assignments.</p>
+					<p>Name: <input type="text" id="name"> Age: <input type="text" id="age"> </p>
+					<button type="button" class="basic-button3" onclick="wardDinner()">Get Assignments</button>
+					<div id="dinnerGroup"></div>
+				</form>
 				<br/>
-				<br/>
-				<button name="submit" value="Add">Add</button>
-				<button name="submit" value="Subtract">Subtract</button>
-				<button name="submit" value="Divide">Divide</button>
-				<button name="submit" value="Multiply">Multiply</button>
-			</form>
+			</div>
 		</div>
-		<script>
-			function subtract(num1, num2) {
-		console.log("Subtract" + num1 + ' ' + num2);
-		return parseInt(num1) - parseInt(num2);
-	}
-
-	function divide(num1, num2) {
-		// console.log("Divide" + num1 + ' ' + num2);
-		return parseInt(num1) / parseInt(num2);
-	}
-
-	function multiply(num1, num2) {
-		// console.log("Multiply" + num1 + ' ' + num2);
-		return parseInt(num1) * parseInt(num2);
-	}
-
-	function add(num1, num2) {
-		// console.log("Add" + num1 + ' ' + num2);
-		return parseInt(num1) + parseInt(num2);
-	}
-	</scrpt>
 	</main>
 
 	<footer>

@@ -26,9 +26,44 @@ h2 {
 
 
 
+
 /*************************************************************************/
 /*********************code fluency page-specific styling******************/
 /*************************************************************************/
+
+
+/*******topic 01-javascript.html styling*********/
+#calc,
+#indexed-assoc-array,
+#array-output-div {
+	margin-left: 15px;
+}
+
+#math-list li,
+#age-list li {
+	list-style-type: circle;
+}
+
+.javascript-basic {
+	font-size: -15px;
+}
+
+
+#vacay-list p {
+	margin-left: 15px;
+}
+
+#1-simple-sorted-array,
+#3-js-math-function,
+#2-assoc-array {
+	margin-bottom: 60px;
+	margin-top: 60px;
+}
+
+#4-conditional-stmt {
+	margin-bottom: 60px;
+	margin-top: 40px;
+}
 
 
 /*******topic 02-javascript-objects.html styling*********/
@@ -77,8 +112,13 @@ h2 {
 
 
 
-/*************topic 03-json.html styling**********/ 
-					  /*&*/
+
+/*************topic 03-json.html styling**********/
+
+
+/*&*/
+
+
 /*************topic 04-ajax.html styling**********/
 
 #assignment-landing-03-04 {
@@ -204,6 +244,7 @@ span.function-span {
 
 
 
+
 /***********topic 06-DOM.html styling*************/
 
 #DOM-headers {}
@@ -237,14 +278,14 @@ span.method-desc {
 
 .click-me-text {
 	font-size: 15px;
-	color: fuchsia;	
+	color: fuchsia;
 	font-weight: 900;
 	margin-bottom: -10px;
 }
 
 .special-text {
 	font-size: 13px;
-	color:fuchsia;
+	color: fuchsia;
 }
 
 .special-text2 {
@@ -254,7 +295,7 @@ span.method-desc {
 
 .special-text3 {
 	font-size: 15px;
-	color:fuchsia;
+	color: fuchsia;
 }
 
 .method-desc2 {
@@ -343,6 +384,7 @@ a {
 
 
 
+
 /******topic 07-css3-using-javascript.html styling*********/
 
 .wrapper {
@@ -384,6 +426,7 @@ button:hover {
 
 
 
+
 /******topic 08-EXPANDED-css3-transit-anim-trans.html styling*********/
 
 .magic-content {
@@ -411,6 +454,7 @@ span {
 	font-weight: 600;
 	color: fuchsia;
 }
+
 
 
 
@@ -464,6 +508,7 @@ video {
 	border: 8px solid orange;
 	margin-left: 15px;
 }
+
 
 
 

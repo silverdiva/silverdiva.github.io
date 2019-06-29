@@ -77,7 +77,7 @@
 		
 		<script>
 			//<div id="storeColor">
-			// Storing the color in local storage
+			//store color locally
 			var htmlElem = document.querySelector('html');
 			var bgcolorForm = document.getElementById('bgcolor');
 
@@ -92,7 +92,7 @@
 				setStyles();
 			}
 
-			// Retrieving the color from local storage
+			//fetch color from local storage
 			function setStyles() {
 				var currentColor = localStorage.getItem('bgcolor');
 				document.getElementById('bgcolor').value = currentColor;

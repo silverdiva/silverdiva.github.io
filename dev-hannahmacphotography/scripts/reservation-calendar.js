@@ -117,7 +117,7 @@ var cal = {
     tForm += "<input type='button' value='Delete' onclick='cal.del()'/>";
     tForm += "<input type='submit' value='Save'/>";
 
-    //events form and saves on submit
+    //events form - saves on submit
     var eForm = document.createElement("form");
     eForm.addEventListener("submit", cal.save);
     eForm.innerHTML = tForm;

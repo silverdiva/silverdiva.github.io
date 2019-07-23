@@ -17,7 +17,6 @@
 	<link href="../css/medium.css" rel="stylesheet">
 	<link href="../css/reservation.css" rel="stylesheet">
 	<link href="../css/reservation-small.css" rel="stylesheet">
-	<!--<link href="../css/five-day-forecast.css" rel="stylesheet">-->
 
 	<!-- import Google fonts -->
 	<link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
@@ -74,7 +73,7 @@
     <main>
         <section id="section-intro">
             <h2>My Schedule</h2>
-            <p>I am generally available on these dates and times (Mountain Time):</p>
+            <p>I am generally available on these day and times (Mountain Time):</p>
             <ul id="weekly-availability">
                 <li>Sundays: OFF</li>
                 <li>Mon:<span id="mon"></span>10am - 3:30pm</li>
@@ -90,10 +89,15 @@
 
         <!--weather forecast sections-->
         <section id="forecast-container">
-            <h2>Weather Conditions</h2>
-            <br>
+            <h2>The Weather</h2>
             <h3>Local Weather Right Now</h3>
-               <p>Weather can play such an big part of how an outdoor shoot can go. These are the most up-to-date weather conditions for Ada County, ID</p>
+               <p>Weather can play such an big part of how an outdoor shoot can go so you always want to know what the current weather conditions are. 
+               <br>
+               <br>
+               It's also nice to have an idea of what the weather might be like a few days in advance, which cold make a difference in what day you want to schedule a session. 
+               <br>
+               <br>
+               These are the most up-to-date weather conditions for our local Ada County, ID area.</p>
             <div id="current-conditions-container">
                 <div class="text-block">
                     <p>Currently: <span id="sky">clear sky</span></p>
@@ -165,7 +169,10 @@
 
         <section id="one-city-weather">
            <h2>Search Weather for Your City</h2>
-            <p>In case you live outside of Ada County, ID, I have included a weather search by city name just for today's weather - because it's always good to know if you need to to bring an umbrella or sunscreen when you leave the house!</p>
+            <p>In case you live outside of Ada County, ID, I have included a weather search by city name today's "current weather" in YOUR city.
+            <br>
+            <br>
+            Because it's always good to know if you need to to bring an umbrella or sunscreen when you leave the house!</p>
 
             <div id="weather-wrapper">
                 <div id="search-header">
@@ -175,7 +182,7 @@
                         <button id="search-btn-2" class="search-btn-2">Search</button>
                     </div>
 
-                    <h2>Your City</h2>
+                    <h3>Your City</h3>
                     <div class="city-icon">
 
                         <div class="city-icon-holder">
@@ -186,7 +193,7 @@
                 </div>
 
                 <div id="JSON-format">
-                    <h2>Weather Details</h2>
+                    <h3>Weather Details</h3>
 
                     <div class="temperature">
                         <div id="temp"></div>

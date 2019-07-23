@@ -16,7 +16,9 @@
 }*/
 
 .words {
-    margin: 20px 10% 0 10%;
+    /*margin: 20px 5% 0 5%;*/
+	margin: 20px 5% 0 0;
+    margin-left: 10px;
 }
 
 
@@ -24,7 +26,7 @@
     opacity: .7;
     min-width: 300px;
     max-width: 900px;
-	margin: 20px 15% 20px 10%;
+	margin: 20px 15% 20px 10px;
     border-radius: 2px;
     border: 6px solid;
     border-color: #789d61;

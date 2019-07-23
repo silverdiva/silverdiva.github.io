@@ -3,7 +3,6 @@ html {
     -ms-text-size-adjust: 100%;
 }
 
-
 * {
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
@@ -26,10 +25,10 @@ header {
     justify-content: flex-start;
 }
 
-
-header img{
+header img {
     max-width: 100%;
 }
+
 
 /*-----------NAVAGATION----------------*/
 
@@ -72,10 +71,9 @@ nav ul li.active a {
     color: white;
 }
 
-
 nav ul.hide {
     /*display: none;*/
-	width: 100%;
+    width: 100%;
 }
 
 
@@ -86,6 +84,90 @@ main {
     min-height: 10rem;
 }
 
+
+/* weekly availability styling */
+
+ul#weekly-availability {
+    /*background: #ccbfd9;
+    background: #8e6b57;
+    background: #edecec;*/
+    background: #dcd9d9;
+    padding: 2px;
+    max-width: 450px;
+    margin-left: 10px;
+}
+
+ul#weekly-availability li {
+    /*background: #70548b;*/
+    background: #81609f;
+    margin: 10px;
+    list-style-type: none;
+    color: white;
+    max-height: 55px;
+    padding-left: 5px;
+    padding-top: 12px;
+    padding-bottom: -3px;
+}
+
+ul li #mon {
+    margin-left: 13px;
+}
+
+ul li #tue {
+    margin-right: 20px;
+}
+
+ul li #wed {
+    margin-left: 15px;
+}
+
+ul li #thu {
+    margin-right: 20px;
+}
+
+ul li #fri {
+    margin-left: 30px;
+}
+
+ul li #sat {
+    margin-right: 28px;
+}
+
+
+/* current weather div */
+
+#current-conditions-container {
+    max-width: 450px;
+}
+
+.text-block {
+    /*background-color: #70548b;
+    background-color: #81609f;
+    background-color: #dcd9d9;
+    background-color: #edecec;*/
+    background-color: #f3f2f2;
+    max-width: 450px;
+    margin-left: 10px;
+    border: 5px double #70548b;
+}
+
+.text-block p {
+    font-weight: 600;
+    /*color: white;*/
+    color: #674d80;
+    /*color: #70548b;*/
+    margin: 10px;
+    max-height: 55px;
+    padding: 2px 2px 5px 2px;
+}
+
+
+/* five-day-container div*/
+
+#five-day-container {
+    max-width: 600px;
+}
+
 #form-style textarea {
     margin: 0px 30px 0px 0px;
     min-width: 425px;
@@ -94,28 +176,29 @@ main {
 
 h2 {
     color: #70548b;
-	margin: 22px;
-
+    margin: 22px 10px;
 }
 
 p {
     color: #45342a;
-	margin: 20px
+    margin: 20px 10px;
 }
 
 h3 {
-	margin: 20px;
+    margin: 10px;
 }
 
 
 /*--------forecast styling-----------------------*/
+
 table {
-	margin: 20px 20px 40px 20px;
+    margin: 20px 20px 40px 20px;
 }
 
 .italic-testimonials {
-	font-style: italic;
+    font-style: italic;
 }
+
 
 /*--------FOOTER-----------------------*/
 

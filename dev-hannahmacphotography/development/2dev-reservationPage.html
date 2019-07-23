@@ -9,7 +9,7 @@
     <meta name="author" content="Kimberly Llanos, Jacob MacDonald, Austin, Kincade">
 
 
-    <title>Dev Reservation: HannahMacPhotography</title>
+    <title>2Dev Reservation: HannahMacPhotography</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <link href="../css/normalize.css" rel="stylesheet">
@@ -57,92 +57,110 @@
     <main>
 
         <section id="section-intro">
-            <h2>My Schedule</h2>
-            <p>I am generally available on these dates and times (Mountain Time):</p>
-            <ul id="weekly-availability">
-                <li>Sundays: OFF</li>
-                <li>Mon:<span id="mon"></span>10am - 3:30pm</li>
-                <li>Tue:<span id="tue"></span>10am - 2pm, 4pm - 8pm</li>
-                <li>Wed:<span id="wed"></span>10am - 2pm</li>
-                <li>Thu:<span id="thu"></span>10am - 12:30pm</li>
-                <li>Fri:<span id="fri"></span>8am - 12:30pm, 1:30pm - 9:30pm</li>
-                <li>Sat:<span id="sat"></span>8am - 12:30pm, 1:30pm - 9:30pm</li>
-            </ul>
-        </section>
-        <hr>
-        <br>
-        <section id="forecast-container">
-            <h2>The Weather</h2>
-            <p>Weather can play such an big part of how an outdoor shoot can go.</p>
-            <br>
-            <h3>Local Weather Conditions</h3>
-            <p>These are the most up-to-date weather conditions for Ada County, ID</p>
-            <div id="current-conditions-container">
-                <div class="text-block">
-                    <p>Currently: <span id="sky">clear sky</span></p>
-                    <p>Temperature: <span id="temp">97.5</span>°</p>
-                    <p>Humidity: <span id="humidity">16</span>%</p>
-                    <p>Wind: <span id="windSpeed">4.7</span>mph</p>
-                    <p>Feels like: <span id="windChill">104</span>°</p>
-                </div>
+            <h2>My Availability Calendar</h2>
+            <p>Here is my <a href="https://calendar.google.com/calendar/b/1?cid=aGFubmFobWFjcGhvdG9ncmFwaHkyN0BnbWFpbC5jb20">Google Calendar, 
+				please let me know what dates and times you are interested in and then fill out
+				
+                <a class="contact-bookmark" href="../bioContact/bioContactPage.html#contact-form">this form</a> to contact me directly.
+                <br><br> I will contact you within 24 hours ~ please be sure to let me know if you prefer me to email, call, or text you!
+                <br><br> In case you are looking to book a photography or videography session with me sooner rather than later, below is a 5-day forecast to give you an idea of what the weather will be like beginning with today's weather.
                 <br>
-            </div>
-            <br>
-            <div id="five-day-container">
-                <h3> Five-day Forecast</h3>
-                <p>In case you are looking to book a photography or videography session within the next week, below is a 5-day forecast for our local area of Ada County, ID.</p>
-                <table class="b">
-                    <thead id="table">
-                        <tr>
-                            <th scope="col">Day 1</th>
-                            <th scope="col">Day 2</th>
-                            <th scope="col">Day 3</th>
-                            <th scope="col">Day 4</th>
-                            <th scope="col">Day 5</th>
-                        </tr>
-                    </thead>
+            </p>
+        </section>
 
-                    <tbody>
-                        <tr>
-                            <td class="icon"><img src="../images/placeholder.png" alt="current weather" id="weather_icon1"></td>
-                            <td class="icon"><img src="../images/placeholder.png" alt="current weather" id="weather_icon2"></td>
-                            <td class="icon"><img src="../images/placeholder.png" alt="current weather" id="weather_icon3"></td>
-                            <td class="icon"><img src="../images/placeholder.png" alt="current weather" id="weather_icon4"></td>
-                            <td class="icon"><img src="../images/placeholder.png" alt="current weather" id="weather_icon5"></td>
-                        </tr>
-                        <tr>
-                            <td class="desc"><span id="description1"></span></td>
-                            <td class="desc"><span id="description2"></span></td>
-                            <td class="desc"><span id="description3"></span></td>
-                            <td class="desc"><span id="description4"></span></td>
-                            <td class="desc"><span id="description5"></span></td>
-                        </tr>
-                        <tr>
-                            <td>High: <span id="high1"></span>°</td>
-                            <td>High: <span id="high2"></span>°</td>
-                            <td>High: <span id="high3"></span>°</td>
-                            <td>High: <span id="high4"></span>°</td>
-                            <td>High: <span id="high5"></span>°</td>
-                        </tr>
-                        <tr>
-                            <td class="low">Low: <span id="low1"></span>°</td>
-                            <td class="low">Low: <span id="low2"></span>°</td>
-                            <td class="low">Low: <span id="low3"></span>°</td>
-                            <td class="low">Low: <span id="low4"></span>°</td>
-                            <td class="low">Low: <span id="low5"></span>°</td>
-                        </tr>
-                        <tr>
-                            <td>Wind: <span id="wind1"></span> mph</td>
-                            <td>Wind: <span id="wind2"></span> mph</td>
-                            <td>Wind: <span id="wind3"></span> mph</td>
-                            <td>Wind: <span id="wind4"></span> mph</td>
-                            <td>Wind: <span id="wind5"></span> mph</td>
-                        </tr>
-                    </tbody>
-                </table>
+        <section id="reservation-calendar">
+            <h2>Add a Calendar Event</h2>
+            <p>Select a date on the calendar to create an event (calendar events options will display below the main calendar).</p>
+            <div class="w3-container">
+                <!-- calendar [date] selector -->
+                <div id="cal-date">
+                    <select id="cal-mth"></select>
+                    <select id="cal-yr"></select>
+                    <input id="cal-set" type="button" value="SET" />
+                </div>
+
+                <!-- calendar container -->
+                <div id="cal-container"></div>
+
+                <!-- calendar event -->
+                <div id="cal-event"></div>
             </div>
         </section>
         <hr>
+
+        <section id="forecast-container">
+            <h2>Five Day Forecast</h2>
+            <p>Weather can play such an big part of how an outdoor shoot can go.
+                <p>In case you are looking to book a photography or videography session within the next week, below is a 5-day forecast for our local area of Ada County, ID.</p>
+
+                <div id="current-conditions-container">
+                    <div class="text-block">
+                        <h3>Current Conditions</h3>
+                        <p>Currently: <span id="sky">currently</span></p>
+                        <p>Temperature: <span id="temp">temp</span>°</p>
+                        <p>Humidity: <span id="humidity">humidity</span>%</p>
+                        <p>Wind: <span id="windSpeed"></span>mph</p>
+                        <p>Feels like: <span id="windChill"></span>°</p>
+                    </div>
+                    <hr>
+                    <br>
+                </div>
+
+                <div id="five-day-container">
+                    <table class="b">
+                        <thead id="table">
+                            <tr>
+                                <th scope="col">Day 1</th>
+                                <th scope="col">Day 2</th>
+                                <th scope="col">Day 3</th>
+                                <th scope="col">Day 4</th>
+                                <th scope="col">Day 5</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr>
+                                <td class="icon"><img src="../images/placeholder.png" alt="current weather" id="weather_icon1"></td>
+                                <td class="icon"><img src="../images/placeholder.png" alt="current weather" id="weather_icon2"></td>
+                                <td class="icon"><img src="../images/placeholder.png" alt="current weather" id="weather_icon3"></td>
+                                <td class="icon"><img src="../images/placeholder.png" alt="current weather" id="weather_icon4"></td>
+                                <td class="icon"><img src="../images/placeholder.png" alt="current weather" id="weather_icon5"></td>
+                            </tr>
+                            <tr>
+                                <td class="desc"><span id="description1"></span></td>
+                                <td class="desc"><span id="description2"></span></td>
+                                <td class="desc"><span id="description3"></span></td>
+                                <td class="desc"><span id="description4"></span></td>
+                                <td class="desc"><span id="description5"></span></td>
+                            </tr>
+                            <tr>
+                                <td>High: <span id="high1"></span>°</td>
+                                <td>High: <span id="high2"></span>°</td>
+                                <td>High: <span id="high3"></span>°</td>
+                                <td>High: <span id="high4"></span>°</td>
+                                <td>High: <span id="high5"></span>°</td>
+                            </tr>
+                            <tr>
+                                <td class="low">Low: <span id="low1"></span>°</td>
+                                <td class="low">Low: <span id="low2"></span>°</td>
+                                <td class="low">Low: <span id="low3"></span>°</td>
+                                <td class="low">Low: <span id="low4"></span>°</td>
+                                <td class="low">Low: <span id="low5"></span>°</td>
+                            </tr>
+                            <tr>
+                                <td>Wind: <span id="wind1"></span> mph</td>
+                                <td>Wind: <span id="wind2"></span> mph</td>
+                                <td>Wind: <span id="wind3"></span> mph</td>
+                                <td>Wind: <span id="wind4"></span> mph</td>
+                                <td>Wind: <span id="wind5"></span> mph</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+        </section>
+        <hr>
+
+
         <section id="once-city-weather">
             <p>In case you live outside of Ada County, ID, I have included a weather search by city name just for today's weather - because it's always good to know if you need to to bring an umbrella or suncreen when you leave the house!</p>
 
@@ -183,37 +201,6 @@
 
             </div>
         </section>
-
-
-
-        <p>Please let me know what dates and times you are interested in and then fill out
-            <a class="contact-bookmark" href="../bioContact/bioContactPage.html#contact-form">this form</a> to contact me directly.
-            <br><br> I will contact you within 24 hours ~ please be sure to let me know if you prefer me to email, call, or text you!
-            <br>
-        </p>
-        </section>
-
-        <section id="reservation-calendar">
-            <h2>Add a Calendar Event</h2>
-            <p>Select a date on the calendar to create an event (calendar events options will display below the main calendar).</p>
-            <div class="w3-container">
-                <!-- calendar [date] selector -->
-                <div id="cal-date">
-                    <select id="cal-mth"></select>
-                    <select id="cal-yr"></select>
-                    <input id="cal-set" type="button" value="SET" />
-                </div>
-
-                <!-- calendar container -->
-                <div id="cal-container"></div>
-
-                <!-- calendar event -->
-                <div id="cal-event"></div>
-            </div>
-        </section>
-        <hr>
-
-
 
         <section id="testmonials">
             <h2> Recent Client Reviews</h2>
@@ -267,8 +254,6 @@
     <script src="../scripts/onecityweather.js"></script>
     <script src="../scripts/weather.js"></script>
     <script src="../scripts/forecast.js"></script>
-
-
 </body>
 
 </html>

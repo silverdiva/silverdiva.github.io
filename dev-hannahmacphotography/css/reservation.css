@@ -4,6 +4,8 @@ Add, Update, Delete an Event
 Uses Local Storage method to save events locally
 */
 
+/*************************************/
+
 . contact-bookmark {
     text-decoration: underline;
 }
@@ -12,11 +14,11 @@ Uses Local Storage method to save events locally
 #reservation-calendar,
 #forecast-container,
 {
-    margin: 50px;
+    /*margin: 50px;*/
 }
 
 #testimonials {
-    margin: 50px;
+    /*margin: 50px;*/
 }
 
 

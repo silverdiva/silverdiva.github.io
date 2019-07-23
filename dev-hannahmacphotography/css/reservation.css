@@ -4,6 +4,7 @@ Add, Update, Delete an Event
 Uses Local Storage method to save events locally
 */
 
+
 /*************************************/
 
 . contact-bookmark {
@@ -21,9 +22,7 @@ Uses Local Storage method to save events locally
     /*margin: 50px;*/
 }
 
-
 /******* Reservation Calendar Styling *****/
-
 #cal-date {
     /*margin: 10px 3px;*/
     margin: 20px 10px;
@@ -40,6 +39,7 @@ Uses Local Storage method to save events locally
 }
 
 #calendar {
+	/*width: 50%;*/
     max-width: 100%;
     margin-left: 0px;
 }
@@ -133,3 +133,4 @@ Uses Local Storage method to save events locally
 table {
     margin: 20px 20px 40px 10px;
 }
+

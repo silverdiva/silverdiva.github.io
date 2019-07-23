@@ -322,8 +322,11 @@ table.b {
 }
 
 
-/**** search weather by location section ****/
-#search {
+/**** search weather by location (1-city, 1-day) section ****/
+#search,
+#city-name,
+#humidity-div,
+#temperature {
     margin-left: 10px;
 }
 

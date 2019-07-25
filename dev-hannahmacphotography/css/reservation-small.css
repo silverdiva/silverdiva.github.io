@@ -35,14 +35,13 @@ header img {
 /**(new) dropdown van styling**/
 
 /* Add a black background color to the top navigation */
-
 .topnav {
     background-color: #dcd9d9;
     overflow: hidden;
 }
 
-/* Style the links inside the navigation bar */
 
+/* Style the links inside the navigation bar */
 .topnav a {
     float: left;
     display: block;
@@ -53,12 +52,13 @@ header img {
     font-size: 17px;
 }
 
-/* Add an active class to highlight the current page */
 
+/* Add an active class to highlight the current page */
 .active {
     background-color: #789d61;
     color: white;
 }
+
 
 /* Hide the link that should open and close the topnav on small screens */
 .topnav .icon {
@@ -235,22 +235,14 @@ ul li #sat {
 }
 
 
-/****forecast section****/
-#forecast-container {
-    margin-top: -30px;
-}
-
-
-
 /****current weather conditions section****/
-#current-conditions-container {
-    max-width: 450px;
+#current-forecast-section{
+	margin-top: -30px;
+}
+.current-conditions {
+    max-width: 300px;
 }
 .text-block {
-    /*background-color: #70548b;
-    background-color: #81609f;
-    background-color: #dcd9d9;
-    background-color: #edecec;*/
     background-color: #f3f2f2;
     max-width: 450px;
     margin-left: 10px;
@@ -267,8 +259,16 @@ ul li #sat {
 }
 
 /****five-day forecast section****/
-#five-day-container {
-    max-width: 450px;
+#five-day-section {
+	max-width: 300px;
+}
+
+div#five-day-div {
+	max-width: 300px;
+}
+#five-day-div {
+    /*max-width: 450px;*/
+	max-width: 100%;
 }
 table {
     border-spacing: 2px;
@@ -283,6 +283,13 @@ thead {
     background: -webkit-linear-gradient(top, #a68fbc 0%,  #81609f 100%);
     background: linear-gradient(to bottom, #a68fbc 0%,  #81609f 100%);
     filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#a68fbc', endColorstr=' #81609f', GradientType=0);
+}
+
+thead#table {
+	max-width: 30px;
+}
+tr.day-columns {
+	max-width: 10px;
 }
 th {
     height: 45px;
@@ -300,6 +307,7 @@ tbody {
     border: 1px solid white;
     border-top: none;
 	margin-left: 10px;
+	max-width: 2px;
 }
 tbody td:nth-child(odd) {
     background-color: #ccbfd9;
@@ -308,21 +316,27 @@ tbody td:nth-child(odd) {
     padding-bottom: 0;
 }
 th, td {
-    padding: 7px 20px;
+    padding: 4px 10px;
     text-align: center;
     border-right: 1px solid lightgrey;
     border-left: 1px solid lightgrey;
+	max-width: 60px;
 }
 tr,
 td {
 	font-size: 12px;
+	max-width: 55px:
 }
 table.b {
 	margin-left: 10px;
+	max-width: 50%;
+	min-width: 20%;
+}
+tr.day-columns {
+	max-width: 55px;
 }
 
-
-/**** search weather by location (1-city, 1-day) section ****/
+/**** search weather by location section ****/    
 #search,
 #city-name,
 #humidity-div,
@@ -330,6 +344,17 @@ table.b {
     margin-left: 10px;
 }
 
+/**** add-an-event Calendar ****/  
+#calendar tr.head td {
+   /* font-weight: bold;
+    text-transform: uppercase;
+    color: #fff;
+    background: #9a87ad;
+    padding: 15px;
+    text-align: center;
+    font-size: .75em;*/
+    max-width: 40px;
+}
 
 /****testimonials section****/
 .italic-testimonials {

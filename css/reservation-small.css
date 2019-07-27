@@ -1,0 +1,437 @@
+html {
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+}
+
+* {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    font-family: sans-serif;
+}
+
+
+/*-------------HEADER------------------*/
+
+header {
+    background-color: #edecec;
+    color: black;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+header img {
+    max-width: 100%;
+}
+
+
+/*-----------NAVAGATION----------------*/
+
+
+/**(new) dropdown van styling**/
+
+
+/* Add a black background color to the top navigation */
+
+.topnav {
+    background-color: #dcd9d9;
+    overflow: hidden;
+}
+
+
+/* Style the links inside the navigation bar */
+
+.topnav a {
+    float: left;
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+
+/* Add an active class to highlight the current page */
+
+.active {
+    background-color: #789d61;
+    color: white;
+}
+
+
+/* Hide the link that should open and close the topnav on small screens */
+
+.topnav .icon {
+    display: none;
+}
+
+
+/* Dropdown container - needed to position the dropdown content */
+
+.dropdown {
+    float: left;
+    overflow: hidden;
+}
+
+
+/* Style the dropdown button to fit inside the topnav */
+
+.dropdown .dropbtn {
+    font-size: 17px;
+    border: none;
+    outline: none;
+    color: black;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+}
+
+
+/* Style the dropdown content (hidden by default) */
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+
+/* Style the links inside the dropdown */
+
+.dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+    border-top: 1px solid rgba(0, 0, 0, 0.3)
+}
+
+
+/* Add a dark background on topnav links and the dropdown button on hover */
+
+.topnav a:hover,
+.dropdown:hover .dropbtn {
+    background-color: #86619d;
+    color: white;
+}
+
+
+/* Add a grey background to dropdown links on hover */
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+
+/* Show the dropdown menu when the user moves the mouse over the dropdown button */
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+
+/* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
+
+@media screen and (max-width: 600px) {
+    .topnav a:not(:first-child),
+    .dropdown .dropbtn {
+        display: none;
+    }
+    .topnav a.icon {
+        float: right;
+        display: block;
+    }
+}
+
+
+/* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
+
+@media screen and (max-width: 600px) {
+    .topnav.responsive {
+        position: relative;
+    }
+    .topnav.responsive a.icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+    .topnav.responsive a {
+        float: none;
+        display: block;
+        text-align: left;
+    }
+    .topnav.responsive .dropdown {
+        float: none;
+    }
+    .topnav.responsive .dropdown-content {
+        position: relative;
+    }
+    .topnav.responsive .dropdown .dropbtn {
+        display: block;
+        width: 100%;
+        text-align: left;
+    }
+}
+
+
+/*---------------MAIN-------------------*/
+
+main {
+    clear: both;
+    min-height: 10rem;
+}
+
+h2 {
+    color: #70548b;
+    margin-left: 10px;
+}
+
+p {
+    color: #45342a;
+    margin-left: 10px
+}
+
+h3 {
+    margin-left: 10px;
+}
+
+
+/****static weekly availability section (section intro)****/
+
+ul#weekly-availability {
+    background: #dcd9d9;
+    padding: 2px;
+    max-width: 450px;
+    margin-left: 10px;
+}
+
+ul#weekly-availability li {
+    background: #81609f;
+    margin: 10px;
+    list-style-type: none;
+    color: white;
+    max-height: 55px;
+    padding-left: 5px;
+    padding-top: 12px;
+    padding-bottom: 10px;
+}
+
+ul li #mon {
+    margin-left: 13px;
+}
+
+ul li #tue {
+    margin-right: 20px;
+}
+
+ul li #wed {
+    margin-left: 15px;
+}
+
+ul li #thu {
+    margin-right: 20px;
+}
+
+ul li #fri {
+    margin-left: 30px;
+}
+
+ul li #sat {
+    margin-right: 28px;
+}
+
+
+/****current weather conditions section****/
+
+#JSON-format {
+    min-height: 150px;
+}
+
+#current-forecast-section {
+    margin-top: -30px;
+}
+
+.current-conditions {
+    max-width: 300px;
+}
+
+.text-block {
+    background-color: #f3f2f2;
+    max-width: 450px;
+    margin-left: 10px;
+    border: 5px double #70548b;
+}
+
+.text-block p {
+    font-weight: 600;
+    color: #674d80;
+    margin: 10px;
+    max-height: 55px;
+    padding: 2px 2px 5px 2px;
+}
+
+
+/****five-day forecast section****/
+
+#five-day-section {
+    max-width: 300px;
+}
+
+div#five-day-div {
+    max-width: 300px;
+}
+
+#five-day-div {
+    max-width: 100%;
+}
+
+table {
+    border-spacing: 2px;
+    border-collapse: collapse;
+    margin: 20px 20px 40px 20px;
+    border: 5px solid #dcd9d9;
+}
+
+thead {
+    vertical-align: middle;
+    background: #a68fbc;
+    background: -moz-linear-gradient(top, #a68fbc 0%, #81609f 100%);
+    background: -webkit-linear-gradient(top, #a68fbc 0%, #81609f 100%);
+    background: linear-gradient(to bottom, #a68fbc 0%, #81609f 100%);
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#a68fbc', endColorstr=' #81609f', GradientType=0);
+}
+
+thead#table {
+    max-width: 30px;
+}
+
+tr.day-columns {
+    max-width: 10px;
+}
+
+th {
+    height: 45px;
+    color: black;
+    border-bottom: none;
+    margin-left: 10px;
+}
+
+th,
+td {
+    padding: 7px 20px;
+    text-align: center;
+    border-right: 1px solid lightgrey;
+    border-left: 1px solid lightgrey;
+}
+
+tbody {
+    border: 1px solid white;
+    border-top: none;
+    margin-left: 10px;
+    max-width: 2px;
+}
+
+tbody td:nth-child(odd) {
+    background-color: #ccbfd9;
+}
+
+.icon {
+    padding-bottom: 0;
+}
+
+th,
+td {
+    padding: 4px 10px;
+    text-align: center;
+    border-right: 1px solid lightgrey;
+    border-left: 1px solid lightgrey;
+    max-width: 60px;
+}
+
+tr,
+td {
+    font-size: 12px;
+    max-width: 55px:
+}
+
+table.b {
+    margin-left: 10px;
+    max-width: 50%;
+    min-width: 20%;
+}
+
+tr.day-columns {
+    max-width: 55px;
+}
+
+
+/**** search weather by location section ****/
+
+#search,
+#city-name,
+#humidity-div,
+#temp-div {
+    margin-left: 10px;
+}
+
+
+/**** add-an-event Calendar ****/
+
+#calendar tr.head td {
+    max-width: 40px;
+}
+
+
+/*tr.head td {
+	margin-left:5px;
+}
+*/
+
+
+/****testimonials section****/
+
+.italic-testimonials {
+    font-style: italic;
+}
+p.testimonials {
+	min-width: 280px;
+}
+
+/*-------------FOOTER-----------------*/
+
+footer {
+    background-color: #edecec;
+    color: black;
+    padding: 10px;
+    text-align: center;
+}
+
+footer p {
+    color: #444444;
+    font-weight: 600;
+}
+
+footer img {
+    width: 50px;
+    height: 50px;
+}
+
+#social-media-icons img {
+    margin-top: 10px;
+    padding: 7px;
+    border-radius: 5px;
+    box-shadow: 5px 5px 5px #70548b;
+}

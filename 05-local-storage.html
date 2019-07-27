@@ -5,10 +5,16 @@
 	<title>CIT 261 | Local Storage</title>
 	<meta charset="utf-8" />
 	<meta name="author" content="Kim Llanos">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+
 	<link href="css/main.css" type="text/css" rel="stylesheet" />
 	<link href="css/code-fluency.css" type="text/css" rel="stylesheet" />
-	<meta name="viewport" content="width=device-width, initial-scale=1" />
-	<script src="scripts/05.js"></script>
+	<link href="css/normalize.css" rel="stylesheet">
+	<link href="css/large.css" rel="stylesheet">
+	<link href="css/medium.css" rel="stylesheet">
+	<link href="css/reservation.css" rel="stylesheet">
+	<link href="css/reservation-small.css" rel="stylesheet">
 </head>
 
 
@@ -39,17 +45,16 @@
 			<h3>Store Your Name Locally</h3>
 			<h2>Check if anything is stored in localStorage.firstname and localStorage.lastname</h2>
 			<p>Without entering any values into the form fields, there will be no output.
-			<br>
-			<br>Once values have been entered, you can 'check' them </p>
+				<br>
+				<br>Once values have been entered, you can 'check' them </p>
 			<div class="outputdivs" id="outputDiv_check_local_storage"></div><br>
 			<button type="submit" onclick="checkLocalStorage()">Check Local Storage</button>
 
 
 			<h3>Enter variables to store in localStorage.firstname and localStorage.lastname</h3>
 			<p>
-			<br>Be sure to click 'store information in local storage.' then click 'check local storage' to see your name appear.
-			<br>
-			Next, either close the browser or refresh the page and your name will appear after you 'check local storage' again!</p>
+				<br>Be sure to click 'store information in local storage.' then click 'check local storage' to see your name appear.
+				<br> Next, either close the browser or refresh the page and your name will appear after you 'check local storage' again!</p>
 			<div name="locallyStored" id="locallyStored">
 				<p>First Name <input type="text" id="first_name" size="50"></p>
 				<p>Last Name <input type="text" id="last_name" size="50"></p>
@@ -65,8 +70,8 @@
 				<h2>Local Storage</h2>
 				<p>Select a color below and it will save locally.<br>
 					<br>Then either close the browser or refresh the page and your selected color choice will remain in the selection box!
-				<label id="chooseColor" for="bgcolor">Choose a color:</label>
-				<input class="color" id="bgcolor" value="FFFFFF" autocomplete="off"></p>
+					<label id="chooseColor" for="bgcolor">Choose a color:</label>
+					<input class="color" id="bgcolor" value="FFFFFF" autocomplete="off"></p>
 				<p>Examples:</p>
 				<p>Red #FF0000</p>
 				<p>Black #000000</p>
@@ -74,7 +79,32 @@
 				<p>Green #008000</p>
 			</div>
 		</div>
-		
+
+		<!-- reservation calendar main container -->
+		<section id="reservation-calendar">
+			<h2>Add a Calendar-Event</h2>
+			<p>To 'save the date' <b>select a date on the calendar</b> to create an event (calendar events-options will display below the main calendar).</p>
+			<p>To edit an event, <b>click on the date with the event</b> you want to edit (the 'edit event' option will display below the main calendar).</p>
+			<p>
+				You can also <b>delete and event</b> using the same steps as above.
+			</p>
+			<div class="calendar-event-container">
+				<!-- calendar [date] selector -->
+				<div id="calendar-date">
+					<select id="calendar-month"></select>
+					<select id="calendar-year"></select>
+					<input id="calendar-set" type="button" value="SET" />
+				</div>
+
+				<!-- calendar container -->
+				<div id="calendar-container"></div>
+
+				<!-- calendar event -->
+				<div id="calendar-event"></div>
+			</div>
+			<br />
+		</section>
+
 		<script>
 			//<div id="storeColor">
 			//store color locally
@@ -101,6 +131,8 @@
 
 			bgcolorForm.onchange = populateColorStorage;
 		</script>
+
+
 	</main>
 
 	<footer>
@@ -121,6 +153,9 @@
 			<p id="byui"><a href="https://www.byui.edu">BYU-Idaho</a></p>
 		</div>
 	</footer>
+	<script src="scripts/05.js"></script>
+	<script src="scripts/reservation-calendar.js"></script>
+	
 </body>
 
 </html>

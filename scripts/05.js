@@ -35,4 +35,28 @@ function storeLocally() {
 }
 
 
+window.onload = init;
+
+function init() {
+    var myObject = {
+        name: "Kimberly",
+        year: "a Senior",
+		favColor: "lilac",
+		favMovie: "Star Wars...of course!"
+        
+    };
+    var myObjectJson = JSON.stringify(myObject);
+	
+    localStorage.setItem("Kimberly", myObjectJson);
+	var newMyObjectJSON = localStorage.getItem("Kimberly");
+	
+	localStorage.setItem("a Senior", myObjectJson);
+    var newMyObjectJSON = localStorage.getItem("a Senior");
+	
+	var newMyObject = JSON.parse(newMyObjectJSON);
+    alert(newMyObject.name + " is " + newMyObject.year + " this semester. " +
+        " And her favorite color is " + newMyObject.favColor + ".  And her favorite movie is " + newMyObject.favMovie);
+}       
+
+
 
